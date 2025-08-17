@@ -1,6 +1,15 @@
 {
   "pins" : [
     {
+      "identity" : "coreswift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Mahaboobsab/CoreSwift.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "6539d040027d7d2965e8563b9035822d81ac934b"
+      }
+    },
+    {
       "identity" : "designcolors",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Mahaboobsab/DesignColors.git",

@@ -19,8 +19,8 @@
 		1EF0EB2C2E524177006A3831 /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF0EB2B2E524177006A3831 /* ButtonStyles.swift */; };
 		1EF0EB312E5243EF006A3831 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1EF0EB332E5243EF006A3831 /* Localizable.strings */; };
 		1EF0EB372E52456F006A3831 /* LocalizedKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF0EB362E52456F006A3831 /* LocalizedKeys.swift */; };
-		1EF0EB392E5246D9006A3831 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF0EB382E5246D9006A3831 /* String+Extension.swift */; };
 		1EF0EB3C2E524D15006A3831 /* DesignColors in Frameworks */ = {isa = PBXBuildFile; productRef = 1EF0EB3B2E524D15006A3831 /* DesignColors */; };
+		1EF0EB3F2E524FBB006A3831 /* CoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1EF0EB3E2E524FBB006A3831 /* CoreSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,7 +39,6 @@
 		1EF0EB322E5243EF006A3831 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1EF0EB342E524401006A3831 /* hi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hi; path = hi.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1EF0EB362E52456F006A3831 /* LocalizedKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedKeys.swift; sourceTree = "<group>"; };
-		1EF0EB382E5246D9006A3831 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +47,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1EF0EB3C2E524D15006A3831 /* DesignColors in Frameworks */,
+				1EF0EB3F2E524FBB006A3831 /* CoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +74,7 @@
 		1EF0EB0C2E521B75006A3831 /* eSociety */ = {
 			isa = PBXGroup;
 			children = (
+				1EF0EB452E525186006A3831 /* Utility */,
 				1EF0EB352E524561006A3831 /* Localization */,
 				1EF0EB222E523A9B006A3831 /* Info.plist */,
 				1EF0EB1F2E523968006A3831 /* Fonts */,
@@ -81,8 +82,6 @@
 				1EF0EB0D2E521B75006A3831 /* eSocietyApp.swift */,
 				1EF0EB112E521B7E006A3831 /* Assets.xcassets */,
 				1EF0EB132E521B7E006A3831 /* Preview Content */,
-				1EF0EB252E523F66006A3831 /* ValidationConstants.swift */,
-				1EF0EB382E5246D9006A3831 /* String+Extension.swift */,
 			);
 			path = eSociety;
 			sourceTree = "<group>";
@@ -106,10 +105,10 @@
 		1EF0EB1C2E521D15006A3831 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				1EF0EB1D2E521D2D006A3831 /* LoginView.swift */,
-				1EF0EB272E523FD9006A3831 /* LoginViewModel.swift */,
+				1EF0EB432E525157006A3831 /* ViewModel */,
+				1EF0EB422E525151006A3831 /* Model */,
+				1EF0EB402E52513E006A3831 /* View */,
 				1EF0EB292E524136006A3831 /* ViewModifiers.swift */,
-				1EF0EB2B2E524177006A3831 /* ButtonStyles.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -131,6 +130,46 @@
 			path = Localization;
 			sourceTree = "<group>";
 		};
+		1EF0EB402E52513E006A3831 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1EF0EB1D2E521D2D006A3831 /* LoginView.swift */,
+				1EF0EB442E525166006A3831 /* Styles */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1EF0EB422E525151006A3831 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1EF0EB432E525157006A3831 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1EF0EB272E523FD9006A3831 /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1EF0EB442E525166006A3831 /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				1EF0EB2B2E524177006A3831 /* ButtonStyles.swift */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
+		1EF0EB452E525186006A3831 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				1EF0EB252E523F66006A3831 /* ValidationConstants.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -149,6 +188,7 @@
 			name = eSociety;
 			packageProductDependencies = (
 				1EF0EB3B2E524D15006A3831 /* DesignColors */,
+				1EF0EB3E2E524FBB006A3831 /* CoreSwift */,
 			);
 			productName = eSociety;
 			productReference = 1EF0EB0A2E521B75006A3831 /* eSociety.app */;
@@ -181,6 +221,7 @@
 			mainGroup = 1EF0EB012E521B74006A3831;
 			packageReferences = (
 				1EF0EB3A2E524D15006A3831 /* XCRemoteSwiftPackageReference "DesignColors" */,
+				1EF0EB3D2E524FBB006A3831 /* XCRemoteSwiftPackageReference "CoreSwift" */,
 			);
 			productRefGroup = 1EF0EB0B2E521B75006A3831 /* Products */;
 			projectDirPath = "";
@@ -211,7 +252,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1EF0EB1E2E521D2D006A3831 /* LoginView.swift in Sources */,
-				1EF0EB392E5246D9006A3831 /* String+Extension.swift in Sources */,
 				1EF0EB2A2E524136006A3831 /* ViewModifiers.swift in Sources */,
 				1EF0EB282E523FD9006A3831 /* LoginViewModel.swift in Sources */,
 				1EF0EB262E523F66006A3831 /* ValidationConstants.swift in Sources */,
@@ -443,6 +483,14 @@
 				kind = branch;
 			};
 		};
+		1EF0EB3D2E524FBB006A3831 /* XCRemoteSwiftPackageReference "CoreSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Mahaboobsab/CoreSwift.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -450,6 +498,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1EF0EB3A2E524D15006A3831 /* XCRemoteSwiftPackageReference "DesignColors" */;
 			productName = DesignColors;
+		};
+		1EF0EB3E2E524FBB006A3831 /* CoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1EF0EB3D2E524FBB006A3831 /* XCRemoteSwiftPackageReference "CoreSwift" */;
+			productName = CoreSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
