@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "designcolors",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Mahaboobsab/DesignColors.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "bbc540afe1833d0cb40bbdd6eca6122753813e11"
+      }
+    }
+  ],
+  "version" : 2
+}

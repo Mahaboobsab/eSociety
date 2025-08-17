@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  eSociety
+
+  Created by Alkit Gupta on 17/08/25.
+  
+*/
+
+"kESociety" = "ई-सोसाइटी";
+"kUserLogin" = "यूज़र लॉगिन";
+"kEmailID" = "ईमेल आईडी";
+"kPassword" = "पासवर्ड";
+"kLogin" = "लॉगिन";

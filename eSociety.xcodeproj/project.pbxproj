@@ -8,19 +8,38 @@
 
 /* Begin PBXBuildFile section */
 		1EF0EB0E2E521B75006A3831 /* eSocietyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF0EB0D2E521B75006A3831 /* eSocietyApp.swift */; };
-		1EF0EB102E521B75006A3831 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF0EB0F2E521B75006A3831 /* ContentView.swift */; };
 		1EF0EB122E521B7E006A3831 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EF0EB112E521B7E006A3831 /* Assets.xcassets */; };
 		1EF0EB152E521B7E006A3831 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EF0EB142E521B7E006A3831 /* Preview Assets.xcassets */; };
 		1EF0EB1E2E521D2D006A3831 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF0EB1D2E521D2D006A3831 /* LoginView.swift */; };
+		1EF0EB212E52397E006A3831 /* Roboto in Resources */ = {isa = PBXBuildFile; fileRef = 1EF0EB202E52397E006A3831 /* Roboto */; };
+		1EF0EB242E523C7F006A3831 /* FontConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF0EB232E523C7F006A3831 /* FontConstants.swift */; };
+		1EF0EB262E523F66006A3831 /* ValidationConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF0EB252E523F66006A3831 /* ValidationConstants.swift */; };
+		1EF0EB282E523FD9006A3831 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF0EB272E523FD9006A3831 /* LoginViewModel.swift */; };
+		1EF0EB2A2E524136006A3831 /* ViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF0EB292E524136006A3831 /* ViewModifiers.swift */; };
+		1EF0EB2C2E524177006A3831 /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF0EB2B2E524177006A3831 /* ButtonStyles.swift */; };
+		1EF0EB312E5243EF006A3831 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1EF0EB332E5243EF006A3831 /* Localizable.strings */; };
+		1EF0EB372E52456F006A3831 /* LocalizedKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF0EB362E52456F006A3831 /* LocalizedKeys.swift */; };
+		1EF0EB392E5246D9006A3831 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF0EB382E5246D9006A3831 /* String+Extension.swift */; };
+		1EF0EB3C2E524D15006A3831 /* DesignColors in Frameworks */ = {isa = PBXBuildFile; productRef = 1EF0EB3B2E524D15006A3831 /* DesignColors */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1EF0EB0A2E521B75006A3831 /* eSociety.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eSociety.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EF0EB0D2E521B75006A3831 /* eSocietyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eSocietyApp.swift; sourceTree = "<group>"; };
-		1EF0EB0F2E521B75006A3831 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1EF0EB112E521B7E006A3831 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1EF0EB142E521B7E006A3831 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1EF0EB1D2E521D2D006A3831 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		1EF0EB202E52397E006A3831 /* Roboto */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Roboto; sourceTree = "<group>"; };
+		1EF0EB222E523A9B006A3831 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		1EF0EB232E523C7F006A3831 /* FontConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontConstants.swift; sourceTree = "<group>"; };
+		1EF0EB252E523F66006A3831 /* ValidationConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationConstants.swift; sourceTree = "<group>"; };
+		1EF0EB272E523FD9006A3831 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		1EF0EB292E524136006A3831 /* ViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.swift; sourceTree = "<group>"; };
+		1EF0EB2B2E524177006A3831 /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
+		1EF0EB322E5243EF006A3831 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1EF0EB342E524401006A3831 /* hi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hi; path = hi.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1EF0EB362E52456F006A3831 /* LocalizedKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedKeys.swift; sourceTree = "<group>"; };
+		1EF0EB382E5246D9006A3831 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EF0EB3C2E524D15006A3831 /* DesignColors in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -37,6 +57,7 @@
 		1EF0EB012E521B74006A3831 = {
 			isa = PBXGroup;
 			children = (
+				1EF0EB332E5243EF006A3831 /* Localizable.strings */,
 				1EF0EB0C2E521B75006A3831 /* eSociety */,
 				1EF0EB0B2E521B75006A3831 /* Products */,
 			);
@@ -53,11 +74,15 @@
 		1EF0EB0C2E521B75006A3831 /* eSociety */ = {
 			isa = PBXGroup;
 			children = (
+				1EF0EB352E524561006A3831 /* Localization */,
+				1EF0EB222E523A9B006A3831 /* Info.plist */,
+				1EF0EB1F2E523968006A3831 /* Fonts */,
 				1EF0EB1B2E521D0B006A3831 /* View */,
 				1EF0EB0D2E521B75006A3831 /* eSocietyApp.swift */,
-				1EF0EB0F2E521B75006A3831 /* ContentView.swift */,
 				1EF0EB112E521B7E006A3831 /* Assets.xcassets */,
 				1EF0EB132E521B7E006A3831 /* Preview Content */,
+				1EF0EB252E523F66006A3831 /* ValidationConstants.swift */,
+				1EF0EB382E5246D9006A3831 /* String+Extension.swift */,
 			);
 			path = eSociety;
 			sourceTree = "<group>";
@@ -82,8 +107,28 @@
 			isa = PBXGroup;
 			children = (
 				1EF0EB1D2E521D2D006A3831 /* LoginView.swift */,
+				1EF0EB272E523FD9006A3831 /* LoginViewModel.swift */,
+				1EF0EB292E524136006A3831 /* ViewModifiers.swift */,
+				1EF0EB2B2E524177006A3831 /* ButtonStyles.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		1EF0EB1F2E523968006A3831 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				1EF0EB202E52397E006A3831 /* Roboto */,
+				1EF0EB232E523C7F006A3831 /* FontConstants.swift */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		1EF0EB352E524561006A3831 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				1EF0EB362E52456F006A3831 /* LocalizedKeys.swift */,
+			);
+			path = Localization;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,6 +147,9 @@
 			dependencies = (
 			);
 			name = eSociety;
+			packageProductDependencies = (
+				1EF0EB3B2E524D15006A3831 /* DesignColors */,
+			);
 			productName = eSociety;
 			productReference = 1EF0EB0A2E521B75006A3831 /* eSociety.app */;
 			productType = "com.apple.product-type.application";
@@ -128,8 +176,12 @@
 			knownRegions = (
 				en,
 				Base,
+				hi,
 			);
 			mainGroup = 1EF0EB012E521B74006A3831;
+			packageReferences = (
+				1EF0EB3A2E524D15006A3831 /* XCRemoteSwiftPackageReference "DesignColors" */,
+			);
 			productRefGroup = 1EF0EB0B2E521B75006A3831 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -145,7 +197,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1EF0EB152E521B7E006A3831 /* Preview Assets.xcassets in Resources */,
+				1EF0EB312E5243EF006A3831 /* Localizable.strings in Resources */,
 				1EF0EB122E521B7E006A3831 /* Assets.xcassets in Resources */,
+				1EF0EB212E52397E006A3831 /* Roboto in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,18 +211,37 @@
 			buildActionMask = 2147483647;
 			files = (
 				1EF0EB1E2E521D2D006A3831 /* LoginView.swift in Sources */,
-				1EF0EB102E521B75006A3831 /* ContentView.swift in Sources */,
+				1EF0EB392E5246D9006A3831 /* String+Extension.swift in Sources */,
+				1EF0EB2A2E524136006A3831 /* ViewModifiers.swift in Sources */,
+				1EF0EB282E523FD9006A3831 /* LoginViewModel.swift in Sources */,
+				1EF0EB262E523F66006A3831 /* ValidationConstants.swift in Sources */,
+				1EF0EB2C2E524177006A3831 /* ButtonStyles.swift in Sources */,
+				1EF0EB242E523C7F006A3831 /* FontConstants.swift in Sources */,
 				1EF0EB0E2E521B75006A3831 /* eSocietyApp.swift in Sources */,
+				1EF0EB372E52456F006A3831 /* LocalizedKeys.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1EF0EB332E5243EF006A3831 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1EF0EB322E5243EF006A3831 /* en */,
+				1EF0EB342E524401006A3831 /* hi */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		1EF0EB162E521B7E006A3831 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -229,6 +302,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -289,6 +363,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"eSociety/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = eSociety/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -317,6 +392,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"eSociety/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = eSociety/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -357,6 +433,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1EF0EB3A2E524D15006A3831 /* XCRemoteSwiftPackageReference "DesignColors" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Mahaboobsab/DesignColors.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1EF0EB3B2E524D15006A3831 /* DesignColors */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1EF0EB3A2E524D15006A3831 /* XCRemoteSwiftPackageReference "DesignColors" */;
+			productName = DesignColors;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1EF0EB022E521B74006A3831 /* Project object */;
 }

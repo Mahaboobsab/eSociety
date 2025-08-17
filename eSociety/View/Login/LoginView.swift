@@ -6,60 +6,50 @@
 //
 
 import SwiftUI
+import DesignColors
 
 struct LoginView: View {
     
-    @State private var username: String = ""
-    @State private var password: String = ""
+    @StateObject private var viewModel = LoginViewModel()
     
     var body: some View {
         ZStack {
-            Color.softWhite // Soft off-white background
-                .ignoresSafeArea()
-            
+            DesignColors.softWhite.ignoresSafeArea()
             VStack {
                 VStack(spacing: 20) {
-                    Text("eSociety")
-                        .font(.system(size: 50))
+                    Text(kesociety.localized)
+                        .font(AppFont.robotoBold(size: 50))
                     
-                    Text("User Login")
-                        .font(.system(size: 30))
+                    Text(kuserLogin.localized)
+                        .font(AppFont.robotoBold(size: 30))
                 }
+                .padding(.top, 50)
                 .padding()
-                
                 VStack(spacing: 16) {
-                    TextField("Username", text: $username)
-                        .padding(.horizontal)
-                        .frame(height: 50)
-                        .background(Color.white)
-                        .cornerRadius(8)
-                    
-                    TextField("Password", text: $password)
-                        .padding(.horizontal)
-                        .frame(height: 50)
-                        .background(Color.white)
-                        .cornerRadius(8)
+                    TextField(kemailID.localized, text: $viewModel.email)
+                        .keyboardType(.emailAddress)
+                        .autocapitalization(.none)
+                        .textContentType(.emailAddress)
+                        .inputFieldStyle()
+                    SecureField(kpassword.localized, text: $viewModel.password)
+                        .textContentType(.password)
+                        .inputFieldStyle()
                 }
                 .padding(.horizontal)
                 
                 VStack(spacing: 20) {
-                    Button("Login") {
+                    Button(klogin.localized) {
                         // Handle login
                     }
-                    .padding()
-                    .frame(maxWidth: .infinity, minHeight: 50)
-                    .background(Color(.lightGray))
-                    .foregroundColor(.black)
-                    .cornerRadius(10)
+                    .disabled(!viewModel.isFormValid)
+                    .primaryButtonStyle(enabled: viewModel.isFormValid)
                 }
                 .padding()
-                
                 Spacer()
             }
         }
     }
 }
-
 
 
 struct LoginView_Previews: PreviewProvider {
@@ -69,6 +59,3 @@ struct LoginView_Previews: PreviewProvider {
 }
 
 
-extension Color {
-    static let softWhite = Color(red: 0.985, green: 0.985, blue: 0.985)
-}
