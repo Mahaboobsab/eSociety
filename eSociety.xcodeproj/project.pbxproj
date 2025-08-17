@@ -11,6 +11,7 @@
 		1EF0EB102E521B75006A3831 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF0EB0F2E521B75006A3831 /* ContentView.swift */; };
 		1EF0EB122E521B7E006A3831 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EF0EB112E521B7E006A3831 /* Assets.xcassets */; };
 		1EF0EB152E521B7E006A3831 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EF0EB142E521B7E006A3831 /* Preview Assets.xcassets */; };
+		1EF0EB1E2E521D2D006A3831 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF0EB1D2E521D2D006A3831 /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		1EF0EB0F2E521B75006A3831 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1EF0EB112E521B7E006A3831 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1EF0EB142E521B7E006A3831 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1EF0EB1D2E521D2D006A3831 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,7 @@
 		1EF0EB0C2E521B75006A3831 /* eSociety */ = {
 			isa = PBXGroup;
 			children = (
+				1EF0EB1B2E521D0B006A3831 /* View */,
 				1EF0EB0D2E521B75006A3831 /* eSocietyApp.swift */,
 				1EF0EB0F2E521B75006A3831 /* ContentView.swift */,
 				1EF0EB112E521B7E006A3831 /* Assets.xcassets */,
@@ -65,6 +68,22 @@
 				1EF0EB142E521B7E006A3831 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1EF0EB1B2E521D0B006A3831 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1EF0EB1C2E521D15006A3831 /* Login */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1EF0EB1C2E521D15006A3831 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				1EF0EB1D2E521D2D006A3831 /* LoginView.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +156,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EF0EB1E2E521D2D006A3831 /* LoginView.swift in Sources */,
 				1EF0EB102E521B75006A3831 /* ContentView.swift in Sources */,
 				1EF0EB0E2E521B75006A3831 /* eSocietyApp.swift in Sources */,
 			);
