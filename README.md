@@ -1,6 +1,10 @@
 # eSociety
 eSociety
 
+**Terms & Conditions**
+
+<img width="296" height="639" alt="Simulator Screen Shot - iPhone 14 - 2025-08-18 at 19 55 41" src="https://github.com/user-attachments/assets/cb75fc7e-fb3b-475a-9e96-088808d3fa3b" />
+
 **Login screen**  
 
 
