@@ -17,6 +17,15 @@
         "branch" : "main",
         "revision" : "bbc540afe1833d0cb40bbdd6eca6122753813e11"
       }
+    },
+    {
+      "identity" : "termsmodule",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Mahaboobsab/TermsModule.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "ba214ac3aa049e4827432bf64922bbe2d4a1e649"
+      }
     }
   ],
   "version" : 2
