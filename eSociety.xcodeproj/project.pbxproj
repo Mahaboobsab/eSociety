@@ -24,6 +24,10 @@
 		1EF0EB372E52456F006A3831 /* LocalizedKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF0EB362E52456F006A3831 /* LocalizedKeys.swift */; };
 		1EF0EB3C2E524D15006A3831 /* DesignColors in Frameworks */ = {isa = PBXBuildFile; productRef = 1EF0EB3B2E524D15006A3831 /* DesignColors */; };
 		1EF0EB3F2E524FBB006A3831 /* CoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1EF0EB3E2E524FBB006A3831 /* CoreSwift */; };
+		61E271B22E5CD59600210628 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E271AF2E5CD59600210628 /* Reachability.swift */; };
+		61E271B32E5CD59600210628 /* NetworkReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E271AE2E5CD59600210628 /* NetworkReachability.swift */; };
+		61E271B42E5CD59600210628 /* WebServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E271B02E5CD59600210628 /* WebServiceManager.swift */; };
+		81EAF8C71C3B024C99CE1232 /* Pods_eSociety.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E860ACC34824A57CA9DAF3E9 /* Pods_eSociety.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +48,12 @@
 		1EF0EB322E5243EF006A3831 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1EF0EB342E524401006A3831 /* hi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hi; path = hi.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1EF0EB362E52456F006A3831 /* LocalizedKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedKeys.swift; sourceTree = "<group>"; };
+		503B7789FA0CF11D84A8C8CD /* Pods-eSociety.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eSociety.debug.xcconfig"; path = "Target Support Files/Pods-eSociety/Pods-eSociety.debug.xcconfig"; sourceTree = "<group>"; };
+		61E271AE2E5CD59600210628 /* NetworkReachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkReachability.swift; sourceTree = "<group>"; };
+		61E271AF2E5CD59600210628 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		61E271B02E5CD59600210628 /* WebServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceManager.swift; sourceTree = "<group>"; };
+		DEA2BDF3D3B8EDFDC4BB6988 /* Pods-eSociety.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eSociety.release.xcconfig"; path = "Target Support Files/Pods-eSociety/Pods-eSociety.release.xcconfig"; sourceTree = "<group>"; };
+		E860ACC34824A57CA9DAF3E9 /* Pods_eSociety.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eSociety.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,12 +64,22 @@
 				1EF0EB3C2E524D15006A3831 /* DesignColors in Frameworks */,
 				1EF0EB3F2E524FBB006A3831 /* CoreSwift in Frameworks */,
 				1E75BE3B2E536BDB008C96CB /* TermsModule in Frameworks */,
+				81EAF8C71C3B024C99CE1232 /* Pods_eSociety.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08ACBEB85AADFA1548EDABD4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				503B7789FA0CF11D84A8C8CD /* Pods-eSociety.debug.xcconfig */,
+				DEA2BDF3D3B8EDFDC4BB6988 /* Pods-eSociety.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		1E75BE3C2E536C6A008C96CB /* TCView */ = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +102,8 @@
 				1EF0EB332E5243EF006A3831 /* Localizable.strings */,
 				1EF0EB0C2E521B75006A3831 /* eSociety */,
 				1EF0EB0B2E521B75006A3831 /* Products */,
+				08ACBEB85AADFA1548EDABD4 /* Pods */,
+				9C9B6CE7C3B18249CEC28DBE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,6 +126,7 @@
 				1EF0EB0D2E521B75006A3831 /* eSocietyApp.swift */,
 				1EF0EB112E521B7E006A3831 /* Assets.xcassets */,
 				1EF0EB132E521B7E006A3831 /* Preview Content */,
+				61E271B12E5CD59600210628 /* WebServiceManager */,
 			);
 			path = eSociety;
 			sourceTree = "<group>";
@@ -194,6 +217,24 @@
 			path = Utility;
 			sourceTree = "<group>";
 		};
+		61E271B12E5CD59600210628 /* WebServiceManager */ = {
+			isa = PBXGroup;
+			children = (
+				61E271AE2E5CD59600210628 /* NetworkReachability.swift */,
+				61E271AF2E5CD59600210628 /* Reachability.swift */,
+				61E271B02E5CD59600210628 /* WebServiceManager.swift */,
+			);
+			path = WebServiceManager;
+			sourceTree = "<group>";
+		};
+		9C9B6CE7C3B18249CEC28DBE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E860ACC34824A57CA9DAF3E9 /* Pods_eSociety.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -201,9 +242,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1EF0EB182E521B7E006A3831 /* Build configuration list for PBXNativeTarget "eSociety" */;
 			buildPhases = (
+				6FA9613AFED6343FB1CE33E0 /* [CP] Check Pods Manifest.lock */,
 				1EF0EB062E521B75006A3831 /* Sources */,
 				1EF0EB072E521B75006A3831 /* Frameworks */,
 				1EF0EB082E521B75006A3831 /* Resources */,
+				42ABA20D380311D18BEB1E05 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -272,6 +315,52 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		42ABA20D380311D18BEB1E05 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-eSociety/Pods-eSociety-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-eSociety/Pods-eSociety-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-eSociety/Pods-eSociety-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6FA9613AFED6343FB1CE33E0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-eSociety-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1EF0EB062E521B75006A3831 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -286,6 +375,9 @@
 				1EF0EB2C2E524177006A3831 /* ButtonStyles.swift in Sources */,
 				1EF0EB242E523C7F006A3831 /* FontConstants.swift in Sources */,
 				1EF0EB0E2E521B75006A3831 /* eSocietyApp.swift in Sources */,
+				61E271B22E5CD59600210628 /* Reachability.swift in Sources */,
+				61E271B32E5CD59600210628 /* NetworkReachability.swift in Sources */,
+				61E271B42E5CD59600210628 /* WebServiceManager.swift in Sources */,
 				1EF0EB372E52456F006A3831 /* LocalizedKeys.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -423,6 +515,7 @@
 		};
 		1EF0EB192E521B7E006A3831 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 503B7789FA0CF11D84A8C8CD /* Pods-eSociety.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -452,6 +545,7 @@
 		};
 		1EF0EB1A2E521B7E006A3831 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DEA2BDF3D3B8EDFDC4BB6988 /* Pods-eSociety.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
