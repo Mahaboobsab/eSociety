@@ -2,7 +2,7 @@
 //  ViewModifiers.swift
 //  eSociety
 //
-//  Created by Alkit Gupta on 17/08/25.
+//  Created by Mahaboobsab Nadaf on 17/08/25.
 //
 
 import SwiftUI

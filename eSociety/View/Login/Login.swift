@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 // MARK: - LoginRequest
 struct LoginRequest: Codable {
     let userEmail, userPassword: String
@@ -29,5 +28,16 @@ struct DataClass: Codable {
         case userName
         case userID = "userId"
         case email
+    }
+}
+
+
+extension LoginRequest {
+    func getUserDetails(loginRequest: LoginRequest) async throws -> LoginResponse {
+        let response: LoginResponse = try await WebServiceManager.shared.postRequest(
+            endpoint: .login,
+            body: loginRequest
+        )
+        return response
     }
 }

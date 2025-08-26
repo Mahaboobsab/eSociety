@@ -2,15 +2,22 @@
 //  LoginViewModel.swift
 //  eSociety
 //
-//  Created by Alkit Gupta on 17/08/25.
+//  Created by Mahaboobsab Nadaf on 17/08/25.
 //
 
 import Foundation
 import SwiftUI
 
-final class LoginViewModel: ObservableObject {
+protocol UserLoginViewModelProtocol: AnyObject, Sendable {
+    func getUserDetails(loginRequest: LoginRequest) async throws -> LoginResponse
+}
+
+@MainActor
+final class LoginViewModel: ObservableObject, UserLoginViewModelProtocol {
+    
     @Published var email: String = ""
     @Published var password: String = ""
+    @Published var isLoading: Bool = false
     
     // MARK: - Validation
     var isEmailValid: Bool {
@@ -23,5 +30,15 @@ final class LoginViewModel: ObservableObject {
     
     var isFormValid: Bool {
         isEmailValid && isPasswordValid
+    }
+    
+    func getUserDetails(loginRequest: LoginRequest) async throws -> LoginResponse {
+        isLoading = true
+        defer { isLoading = false }
+        
+        return try await WebServiceManager.shared.postRequest(
+            endpoint: .login,
+            body: loginRequest
+        )
     }
 }

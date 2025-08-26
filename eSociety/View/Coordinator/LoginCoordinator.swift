@@ -2,7 +2,7 @@
 //  AppCoordinator.swift
 //  eSociety
 //
-//  Created by Alkit Gupta on 18/08/25.
+//  Created by Mahaboobsab Nadaf on 18/08/25.
 //
 
 import SwiftUI
