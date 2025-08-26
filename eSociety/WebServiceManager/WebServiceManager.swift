@@ -87,6 +87,6 @@ final class WebServiceManager {
 
 extension Bundle {
     var baseURL: String {
-        "https://api.openweathermap.org/"
+        "https://api-dev-scus-demo.azurewebsites.net/"
     }
 }
