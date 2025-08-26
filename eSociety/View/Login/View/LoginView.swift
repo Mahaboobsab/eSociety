@@ -84,7 +84,6 @@ struct LoginView: View {
                         .frame(maxWidth: .infinity)
                     }
                 }
-                // ⛔️ Remove any onAppear that forces showTerms = true
                 .sheet(isPresented: $coordinator.showTerms) {
                     TermsViewWrapper(delegate: coordinator)
                 }
