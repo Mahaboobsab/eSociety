@@ -9,7 +9,8 @@ import SwiftUI
 import TermsModule
 
 enum LoginDestination: Hashable {
-    case addNewFamily
+    case mainView
+     
 }
 
 final class LoginCoordinator: ObservableObject, TermsDelegate {
@@ -36,6 +37,6 @@ final class LoginCoordinator: ObservableObject, TermsDelegate {
     }
 
     func navigateToAddNewFamilyView() {
-        navigationPath.append(LoginDestination.addNewFamily)
+        navigationPath.append(LoginDestination.mainView)
     }
 }

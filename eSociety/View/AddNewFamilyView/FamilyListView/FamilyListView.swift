@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct FamilyListView: View {
-    
     @State private var searchText: String = ""
-    
+    @State private var navigateToAddFamily = false
+
     let flats: [FlatInfo] = [
         FlatInfo(flatNumber: "101", ownerName: "Meheboob", contact: "9876543210", residents: 4, owneship: "Owned"),
         FlatInfo(flatNumber: "102", ownerName: "Sara", contact: "9123456780", residents: 3, owneship: "Rented"),
@@ -19,11 +19,32 @@ struct FamilyListView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
-            Text(kFamilyList.localized)
-                .font(AppFont.robotoBold(size: 25))
-                .foregroundColor(.primary)
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.leading, 16)
+            HStack {
+                Text(kFamilyList.localized)
+                    .font(AppFont.robotoBold(size: 25))
+                    .foregroundColor(.primary)
+
+                Spacer()
+
+                Button(action: {
+                    navigateToAddFamily = true
+                }) {
+                    Label("Add New Family", systemImage: "plus")
+                        .font(.headline)
+                        .padding(.horizontal, 12)
+                        .padding(.vertical, 8)
+                        .background(Color.black)
+                        .foregroundColor(.white)
+                        .cornerRadius(8)
+                }
+
+                // Hidden NavigationLink triggered by state
+                NavigationLink(destination: AddNewFamilyView(), isActive: $navigateToAddFamily) {
+                    EmptyView()
+                }
+                .hidden()
+            }
+            .padding(.horizontal, 16)
 
             TextField(kSearch.localized, text: $searchText)
                 .padding(10)
@@ -49,6 +70,8 @@ struct FamilyListView: View {
         }
     }
 }
+
+
 
 #Preview {
     FamilyListView()

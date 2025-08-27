@@ -12,12 +12,12 @@ import CoreSwift
 struct LoginView: View {
     @StateObject private var viewModel = LoginViewModel()
     @StateObject private var coordinator = LoginCoordinator()
-
+    
     @State private var toast: String? = nil
     @State private var showAlert = false
     @State private var alertTitle = ""
     @State private var alertMessage = ""
-
+    
     var body: some View {
         NavigationStack(path: $coordinator.navigationPath) {
             BaseView(
@@ -32,7 +32,7 @@ struct LoginView: View {
             ) {
                 ZStack {
                     DesignColors.softWhite.ignoresSafeArea()
-
+                    
                     ScrollView {
                         VStack(spacing: 32) {
                             VStack(spacing: 20) {
@@ -43,20 +43,20 @@ struct LoginView: View {
                             }
                             .padding(.top, 50)
                             .padding(.horizontal)
-
+                            
                             VStack(spacing: 16) {
                                 TextField(kemailID.localized, text: $viewModel.email)
                                     .keyboardType(.emailAddress)
                                     .autocapitalization(.none)
                                     .textContentType(.emailAddress)
                                     .inputFieldStyle()
-
+                                
                                 SecureField(kpassword.localized, text: $viewModel.password)
                                     .textContentType(.password)
                                     .inputFieldStyle()
                             }
                             .padding(.horizontal)
-
+                            
                             VStack(spacing: 20) {
                                 Button(klogin.localized) {
                                     Task {
@@ -78,7 +78,7 @@ struct LoginView: View {
                                 .primaryButtonStyle(enabled: viewModel.isFormValid && coordinator.hasAcceptedTerms)
                             }
                             .padding(.horizontal)
-
+                            
                             Spacer(minLength: 50)
                         }
                         .frame(maxWidth: .infinity)
@@ -90,8 +90,8 @@ struct LoginView: View {
             }
             .navigationDestination(for: LoginDestination.self) { dest in
                 switch dest {
-                case .addNewFamily:
-                    AddNewFamilyView()
+                case .mainView:
+                    MainView()
                 }
             }
         }

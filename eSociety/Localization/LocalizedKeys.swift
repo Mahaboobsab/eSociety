@@ -9,7 +9,7 @@ import Foundation
 
 
 // MARK: - App Branding & Login
-let kesociety = "ESociety"
+let kesociety = "eSociety"
 let kuserLogin = "UserLogin"
 let kemailID = "EmailID"
 let kpassword = "Password"

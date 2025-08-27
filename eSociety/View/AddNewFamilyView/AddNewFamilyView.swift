@@ -63,7 +63,7 @@ struct AddNewFamilyView: View {
                     Text(kSubmitButton.localized)
                         .frame(maxWidth: .infinity, minHeight: fieldHeight)
                         .foregroundColor(.white)
-                        .background(Color.blue)
+                        .background(Color.black)
                         .cornerRadius(8)
                         .font(.headline)
                 }
