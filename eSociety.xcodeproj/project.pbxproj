@@ -90,6 +90,10 @@
 		61B6457E2E5ECA6C00C189B3 /* FlatInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B6457D2E5ECA6A00C189B3 /* FlatInfo.swift */; };
 		61B645812E5ECAA500C189B3 /* FlatCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B645802E5ECAA400C189B3 /* FlatCellView.swift */; };
 		61B645AC2E5EF77200C189B3 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B645AB2E5EF77200C189B3 /* MainView.swift */; };
+		61B645AF2E5F30D900C189B3 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B645AE2E5F30D900C189B3 /* DashboardView.swift */; };
+		61B645B12E5F34B900C189B3 /* PlannedActivitiesGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B645B02E5F34B700C189B3 /* PlannedActivitiesGraphView.swift */; };
+		61B645B32E5F374C00C189B3 /* YoYSpendingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B645B22E5F374A00C189B3 /* YoYSpendingView.swift */; };
+		61B645B52E5F3DEC00C189B3 /* BadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B645B42E5F3DE800C189B3 /* BadgeView.swift */; };
 		61E271B22E5CD59600210628 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E271AF2E5CD59600210628 /* Reachability.swift */; };
 		61E271B32E5CD59600210628 /* NetworkReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E271AE2E5CD59600210628 /* NetworkReachability.swift */; };
 		61E271B42E5CD59600210628 /* WebServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E271B02E5CD59600210628 /* WebServiceManager.swift */; };
@@ -180,6 +184,10 @@
 		61B6457D2E5ECA6A00C189B3 /* FlatInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatInfo.swift; sourceTree = "<group>"; };
 		61B645802E5ECAA400C189B3 /* FlatCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatCellView.swift; sourceTree = "<group>"; };
 		61B645AB2E5EF77200C189B3 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		61B645AE2E5F30D900C189B3 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		61B645B02E5F34B700C189B3 /* PlannedActivitiesGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannedActivitiesGraphView.swift; sourceTree = "<group>"; };
+		61B645B22E5F374A00C189B3 /* YoYSpendingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoYSpendingView.swift; sourceTree = "<group>"; };
+		61B645B42E5F3DE800C189B3 /* BadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeView.swift; sourceTree = "<group>"; };
 		61E271AE2E5CD59600210628 /* NetworkReachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkReachability.swift; sourceTree = "<group>"; };
 		61E271AF2E5CD59600210628 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		61E271B02E5CD59600210628 /* WebServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceManager.swift; sourceTree = "<group>"; };
@@ -274,6 +282,7 @@
 		1EF0EB1B2E521D0B006A3831 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				61B645AD2E5F30BC00C189B3 /* DashboardView */,
 				61B645822E5EE81000C189B3 /* MainView */,
 				61B40FB02E5E1FA60008F978 /* AddNewFamilyView */,
 				61B40FAD2E5E170F0008F978 /* BaseView */,
@@ -476,6 +485,17 @@
 				61B645AB2E5EF77200C189B3 /* MainView.swift */,
 			);
 			path = MainView;
+			sourceTree = "<group>";
+		};
+		61B645AD2E5F30BC00C189B3 /* DashboardView */ = {
+			isa = PBXGroup;
+			children = (
+				61B645B42E5F3DE800C189B3 /* BadgeView.swift */,
+				61B645B22E5F374A00C189B3 /* YoYSpendingView.swift */,
+				61B645B02E5F34B700C189B3 /* PlannedActivitiesGraphView.swift */,
+				61B645AE2E5F30D900C189B3 /* DashboardView.swift */,
+			);
+			path = DashboardView;
 			sourceTree = "<group>";
 		};
 		61E271B12E5CD59600210628 /* WebServiceManager */ = {
@@ -703,8 +723,12 @@
 				1EF0EB0E2E521B75006A3831 /* eSocietyApp.swift in Sources */,
 				61E271B22E5CD59600210628 /* Reachability.swift in Sources */,
 				61E271B32E5CD59600210628 /* NetworkReachability.swift in Sources */,
+				61B645AF2E5F30D900C189B3 /* DashboardView.swift in Sources */,
 				61E271B42E5CD59600210628 /* WebServiceManager.swift in Sources */,
 				1EF0EB372E52456F006A3831 /* LocalizedKeys.swift in Sources */,
+				61B645B32E5F374C00C189B3 /* YoYSpendingView.swift in Sources */,
+				61B645B52E5F3DEC00C189B3 /* BadgeView.swift in Sources */,
+				61B645B12E5F34B900C189B3 /* PlannedActivitiesGraphView.swift in Sources */,
 				61B40FAF2E5E171A0008F978 /* BaseView.swift in Sources */,
 				61B6457E2E5ECA6C00C189B3 /* FlatInfo.swift in Sources */,
 			);

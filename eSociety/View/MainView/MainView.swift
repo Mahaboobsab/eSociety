@@ -37,6 +37,8 @@ struct MainView: View {
         switch title {
         case "Families":
             FamilyListView()
+        case "Dashboard":
+            DashboardView()
         default:
             Text("\(title) Screen")
         }
