@@ -1,5 +1,4 @@
 # eSociety
-eSociety
 
 **Terms & Conditions**
 
