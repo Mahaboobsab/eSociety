@@ -9,12 +9,12 @@ import SwiftUI
 
 struct AddNewFamilyView: View {
     
-    @State private var ownershipType = "Owner"
-    @State private var maintenanceType = "Monthly"
+    @State private var ownershipType = kOwnerOption
+    @State private var maintenanceType = kMonthlyOption
     @State private var selectedDate = Date()
     
-    let ownerOptions = ["Owner", "Tenant", "Family Member", "Other"]
-    let maintenanceOptions = ["Monthly", "Quarterly", "Yearly"]
+    let ownerOptions = [kOwnerOption, kTenantOption, kFamilyMemberOption, kOtherOption]
+    let maintenanceOptions = [kMonthlyOption, kQuarterlyOption, kYearlyOption]
     
     let fieldHeight: CGFloat = 60
     
@@ -22,24 +22,24 @@ struct AddNewFamilyView: View {
         ScrollView {
             VStack(alignment: .leading, spacing: 16) {
                 
-                Text("Manage Families in Society")
-                    .font(.custom("Roboto-Bold", size: 28))
+                Text(kManageFamiliesTitle.localized)
+                    .font(AppFont.robotoBold(size: 28))
                     .foregroundColor(.primary)
                 
-                Text("Add New Family")
-                    .font(.custom("Roboto-Regular", size: 22))
+                Text(kAddNewFamilyTitle.localized)
+                    .font(AppFont.robotoRegular(size: 22))
                 
                 Group {
-                    labeledTextField("Flat number", placeholder: "Enter Flat number")
-                    labeledTextField("Email ID", placeholder: "Enter Email ID")
-                    labeledTextField("Owner Name", placeholder: "Enter Owner Name")
+                    labeledTextField(kFlatNumberLabel.localized, placeholder: kFlatNumberPlaceholder.localized)
+                    labeledTextField(kEmailIDLabel.localized, placeholder: kEmailIDPlaceholder.localized)
+                    labeledTextField(kOwnerNameLabel.localized, placeholder: kOwnerNamePlaceholder.localized)
                     
-                    labeledPicker("Ownership Type", selection: $ownershipType, options: ownerOptions)
+                    labeledPicker(kOwnershipTypeLabel.localized, selection: $ownershipType, options: ownerOptions.map { $0.localized })
                     
-                    labeledTextField("Contact Number", placeholder: "Enter Contact Number")
+                    labeledTextField(kContactNumberLabel.localized, placeholder: kContactNumberPlaceholder.localized)
                     
-                    Text("Move-In Date")
-                        .font(.custom("Roboto-Regular", size: 18))
+                    Text(kMoveInDateLabel.localized)
+                        .font(AppFont.robotoRegular(size: 18))
                     
                     ZStack {
                         RoundedRectangle(cornerRadius: 8)
@@ -52,22 +52,21 @@ struct AddNewFamilyView: View {
                             .padding(.horizontal)
                     }
                     
-                    labeledTextField("Number of Residents", placeholder: "Enter Number of Resident")
+                    labeledTextField(kResidentCountLabel.localized, placeholder: kResidentCountPlaceholder.localized)
                     
-                    labeledPicker("Maintainance Category", selection: $maintenanceType, options: maintenanceOptions)
+                    labeledPicker(kMaintenanceCategoryLabel.localized, selection: $maintenanceType, options: maintenanceOptions.map { $0.localized })
                 }
                 
-                Button( action: {
+                Button(action: {
                     // Submit logic here
                 }) {
-                    Text("Submit")
+                    Text(kSubmitButton.localized)
                         .frame(maxWidth: .infinity, minHeight: fieldHeight)
                         .foregroundColor(.white)
                         .background(Color.blue)
                         .cornerRadius(8)
                         .font(.headline)
                 }
-                //.padding(.horizontal) // Moved outside to align with fields
             }
             .padding()
         }
@@ -78,9 +77,10 @@ struct AddNewFamilyView: View {
     func labeledTextField(_ label: String, placeholder: String) -> some View {
         VStack(alignment: .leading, spacing: 4) {
             Text(label)
-                .font(.custom("Roboto-Regular", size: 18))
+                .font(AppFont.robotoRegular(size: 18))
+            
             TextField(placeholder, text: .constant(""))
-                .font(.custom("Roboto-Regular", size: 18))
+                .font(AppFont.robotoRegular(size: 18))
                 .padding()
                 .frame(height: fieldHeight)
                 .overlay(RoundedRectangle(cornerRadius: 8).stroke(Color.gray, lineWidth: 1))
@@ -90,7 +90,8 @@ struct AddNewFamilyView: View {
     func labeledPicker(_ label: String, selection: Binding<String>, options: [String]) -> some View {
         VStack(alignment: .leading, spacing: 4) {
             Text(label)
-                .font(.custom("Roboto-Regular", size: 18))
+                .font(AppFont.robotoRegular(size: 18))
+            
             Menu {
                 ForEach(options, id: \.self) { option in
                     Button(option) {
@@ -112,6 +113,7 @@ struct AddNewFamilyView: View {
         }
     }
 }
+
 
 #Preview {
     AddNewFamilyView()

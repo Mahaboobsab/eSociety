@@ -6,8 +6,57 @@
   
 */
 
-"kESociety" = "ई-सोसाइटी";
-"kUserLogin" = "यूज़र लॉगिन";
-"kEmailID" = "ईमेल आईडी";
-"kPassword" = "पासवर्ड";
-"kLogin" = "लॉगिन";
+"eSociety" = "ई-सोसाइटी";
+"UserLogin" = "यूज़र लॉगिन";
+"EmailID" = "ईमेल आईडी";
+"Password" = "पासवर्ड";
+"Login" = "लॉगिन";
+"FlatNo" = "फ्लैट नंबर:";
+"OwnerName" = "मालिक:";
+"Contact" = "संपर्क:";
+"ResidentCount" = "निवासी:";
+"Ownership" = "स्वामित्व:";
+"Actions" = "क्रियाएँ:";
+"Delete" = "हटाएँ";
+"Edit" = "संपादित करें";
+"ResidentDetails" = "निवासी विवरण";
+"ResidentName" = "निवासी का नाम";
+"ResidentContact" = "निवासी संपर्क";
+"ResidentFlatNo" = "निवासी फ्लैट नंबर";
+"ResidentEmailID" = "निवासी ईमेल आईडी";
+"ResidentPassword" = "निवासी पासवर्ड";
+
+"ManageFamiliesTitle" = "सोसाइटी में परिवारों का प्रबंधन करें";
+"AddNewFamilyTitle" = "नया परिवार जोड़ें";
+
+"FlatNumberLabel" = "फ्लैट नंबर";
+"FlatNumberPlaceholder" = "फ्लैट नंबर दर्ज करें";
+
+"EmailIDLabel" = "ईमेल आईडी";
+"EmailIDPlaceholder" = "ईमेल आईडी दर्ज करें";
+
+"OwnerNameLabel" = "मालिक का नाम";
+"OwnerNamePlaceholder" = "मालिक का नाम दर्ज करें";
+
+"OwnershipTypeLabel" = "स्वामित्व प्रकार";
+
+"ContactNumberLabel" = "संपर्क नंबर";
+"ContactNumberPlaceholder" = "संपर्क नंबर दर्ज करें";
+
+"MoveInDateLabel" = "प्रवेश की तिथि";
+
+"ResidentCountLabel" = "निवासियों की संख्या";
+"ResidentCountPlaceholder" = "निवासियों की संख्या दर्ज करें";
+
+"MaintenanceCategoryLabel" = "रखरखाव श्रेणी";
+
+"SubmitButton" = "जमा करें";
+
+"OwnerOption" = "मालिक";
+"TenantOption" = "किरायेदार";
+"FamilyMemberOption" = "परिवार का सदस्य";
+"OtherOption" = "अन्य";
+
+"MonthlyOption" = "मासिक";
+"QuarterlyOption" = "त्रैमासिक";
+"YearlyOption" = "वार्षिक";

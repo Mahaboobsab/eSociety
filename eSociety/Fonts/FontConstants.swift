@@ -30,4 +30,9 @@ enum AppFont {
     static func robotoLight(size: CGFloat) -> Font {
         .custom(FontName.robotoLight, size: size)
     }
+    
+    static func robotoRegular(size: CGFloat) -> Font {
+        .custom(FontName.robotoRegular, size: size)
+    }
 }
+

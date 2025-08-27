@@ -86,6 +86,9 @@
 		61B40FAC2E5E14FC0008F978 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 61B40F5D2E5E14FC0008F978 /* Roboto-Bold.ttf */; };
 		61B40FAF2E5E171A0008F978 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B40FAE2E5E17190008F978 /* BaseView.swift */; };
 		61B40FB22E5E1FE40008F978 /* AddNewFamilyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B40FB12E5E1FE40008F978 /* AddNewFamilyView.swift */; };
+		61B6457B2E5EC21500C189B3 /* FamilyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B6457A2E5EC21500C189B3 /* FamilyListView.swift */; };
+		61B6457E2E5ECA6C00C189B3 /* FlatInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B6457D2E5ECA6A00C189B3 /* FlatInfo.swift */; };
+		61B645812E5ECAA500C189B3 /* FlatCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B645802E5ECAA400C189B3 /* FlatCellView.swift */; };
 		61E271B22E5CD59600210628 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E271AF2E5CD59600210628 /* Reachability.swift */; };
 		61E271B32E5CD59600210628 /* NetworkReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E271AE2E5CD59600210628 /* NetworkReachability.swift */; };
 		61E271B42E5CD59600210628 /* WebServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E271B02E5CD59600210628 /* WebServiceManager.swift */; };
@@ -172,6 +175,9 @@
 		61B40F712E5E14FC0008F978 /* Roboto-VariableFont_wdth,wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-VariableFont_wdth,wght.ttf"; sourceTree = "<group>"; };
 		61B40FAE2E5E17190008F978 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		61B40FB12E5E1FE40008F978 /* AddNewFamilyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewFamilyView.swift; sourceTree = "<group>"; };
+		61B6457A2E5EC21500C189B3 /* FamilyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyListView.swift; sourceTree = "<group>"; };
+		61B6457D2E5ECA6A00C189B3 /* FlatInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatInfo.swift; sourceTree = "<group>"; };
+		61B645802E5ECAA400C189B3 /* FlatCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatCellView.swift; sourceTree = "<group>"; };
 		61E271AE2E5CD59600210628 /* NetworkReachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkReachability.swift; sourceTree = "<group>"; };
 		61E271AF2E5CD59600210628 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		61E271B02E5CD59600210628 /* WebServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceManager.swift; sourceTree = "<group>"; };
@@ -266,6 +272,7 @@
 		1EF0EB1B2E521D0B006A3831 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				61B645792E5EC1E000C189B3 /* FamilyListView */,
 				61B40FB02E5E1FA60008F978 /* AddNewFamilyView */,
 				61B40FAD2E5E170F0008F978 /* BaseView */,
 				1E75BE3C2E536C6A008C96CB /* TCView */,
@@ -432,6 +439,32 @@
 				61B40FB12E5E1FE40008F978 /* AddNewFamilyView.swift */,
 			);
 			path = AddNewFamilyView;
+			sourceTree = "<group>";
+		};
+		61B645792E5EC1E000C189B3 /* FamilyListView */ = {
+			isa = PBXGroup;
+			children = (
+				61B6457F2E5ECA9D00C189B3 /* FlatCellView */,
+				61B6457C2E5ECA6400C189B3 /* Model */,
+				61B6457A2E5EC21500C189B3 /* FamilyListView.swift */,
+			);
+			path = FamilyListView;
+			sourceTree = "<group>";
+		};
+		61B6457C2E5ECA6400C189B3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				61B6457D2E5ECA6A00C189B3 /* FlatInfo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		61B6457F2E5ECA9D00C189B3 /* FlatCellView */ = {
+			isa = PBXGroup;
+			children = (
+				61B645802E5ECAA400C189B3 /* FlatCellView.swift */,
+			);
+			path = FlatCellView;
 			sourceTree = "<group>";
 		};
 		61E271B12E5CD59600210628 /* WebServiceManager */ = {
@@ -648,10 +681,12 @@
 				1E75BE412E536CC3008C96CB /* LoginCoordinator.swift in Sources */,
 				1EF0EB282E523FD9006A3831 /* LoginViewModel.swift in Sources */,
 				61B40F362E5DF8D20008F978 /* APIEndpoint.swift in Sources */,
+				61B6457B2E5EC21500C189B3 /* FamilyListView.swift in Sources */,
 				1E75BE3E2E536C7D008C96CB /* TermsViewWrapper.swift in Sources */,
 				1EF0EB262E523F66006A3831 /* ValidationConstants.swift in Sources */,
 				1EF0EB2C2E524177006A3831 /* ButtonStyles.swift in Sources */,
 				61B40F312E5DF3A50008F978 /* Login.swift in Sources */,
+				61B645812E5ECAA500C189B3 /* FlatCellView.swift in Sources */,
 				1EF0EB242E523C7F006A3831 /* FontConstants.swift in Sources */,
 				1EF0EB0E2E521B75006A3831 /* eSocietyApp.swift in Sources */,
 				61E271B22E5CD59600210628 /* Reachability.swift in Sources */,
@@ -659,6 +694,7 @@
 				61E271B42E5CD59600210628 /* WebServiceManager.swift in Sources */,
 				1EF0EB372E52456F006A3831 /* LocalizedKeys.swift in Sources */,
 				61B40FAF2E5E171A0008F978 /* BaseView.swift in Sources */,
+				61B6457E2E5ECA6C00C189B3 /* FlatInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

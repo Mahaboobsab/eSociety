@@ -6,8 +6,59 @@
   
 */
 
-"kESociety" = "eSociety";
-"kUserLogin" = "User Login";
-"kEmailID" = "Email ID";
-"kPassword" = "Password";
-"kLogin" = "Login";
+"eSociety" = "eSociety";
+"UserLogin" = "User Login";
+"EmailID" = "Email ID";
+"Password" = "Password";
+"Login" = "Login";
+"FlatNo" = "Flat No:";
+"OwnerName" = "Owner:";
+"Contact" = "Contact:";
+"ResidentCount" = "Residents:";
+"Ownership" = "Ownership:";
+"Actions" = "Actions:";
+"Delete" = "Delete";
+"Edit" = "Edit";
+"ResidentDetails" = "Resident Details";
+"ResidentName" = "Resident Name";
+"ResidentContact" = "Resident Contact";
+"ResidentFlatNo" = "Resident Flat No";
+"ResidentEmailID" = "Resident Email ID";
+"ResidentPassword" = "Resident Password";
+"FamilyList" = "Family List";
+"Search" = "Search...";
+
+"ManageFamiliesTitle" = "Manage Families in Society";
+"AddNewFamilyTitle" = "Add New Family";
+
+"FlatNumberLabel" = "Flat number";
+"FlatNumberPlaceholder" = "Enter Flat number";
+
+"EmailIDLabel" = "Email ID";
+"EmailIDPlaceholder" = "Enter Email ID";
+
+"OwnerNameLabel" = "Owner Name";
+"OwnerNamePlaceholder" = "Enter Owner Name";
+
+"OwnershipTypeLabel" = "Ownership Type";
+
+"ContactNumberLabel" = "Contact Number";
+"ContactNumberPlaceholder" = "Enter Contact Number";
+
+"MoveInDateLabel" = "Move-In Date";
+
+"ResidentCountLabel" = "Number of Residents";
+"ResidentCountPlaceholder" = "Enter Number of Resident";
+
+"MaintenanceCategoryLabel" = "Maintainance Category";
+
+"SubmitButton" = "Submit";
+
+"OwnerOption" = "Owner";
+"TenantOption" = "Tenant";
+"FamilyMemberOption" = "Family Member";
+"OtherOption" = "Other";
+
+"MonthlyOption" = "Monthly";
+"QuarterlyOption" = "Quarterly";
+"YearlyOption" = "Yearly";
