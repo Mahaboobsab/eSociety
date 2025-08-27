@@ -27,10 +27,8 @@ eSociety
 
 **Add Family**  
 
-
-<img width="296" height="639" alt="Simulator Screenshot - iPhone 16 Plus - 2025-08-27 at 18 59 30" src="https://github.com/user-attachments/assets/2350d239-1b21-4992-a125-fe832b7bf4e0" />
-
 <img width="296" height="639" alt="Simulator Screenshot - iPhone 16 Plus - 2025-08-27 at 18 59 12" src="https://github.com/user-attachments/assets/585f79a9-c2e3-4e57-b81f-9cd1da3bbc29" />
 
-<img width="296" height="639" alt="Simulator Screenshot - iPhone 16 Plus - 2025-08-27 at 18 59 09" src="https://github.com/user-attachments/assets/df6733dd-db8e-460a-8268-47f9b2d317a4" />
+<img width="296" height="639" alt="Simulator Screenshot - iPhone 16 Plus - 2025-08-27 at 18 59 09" src="https://github.com/user-attachments/assets/df6733dd-db8e-460a-8268-47f9b2d317a4" />  
 
+<img width="296" height="639" alt="Simulator Screenshot - iPhone 16 Plus - 2025-08-27 at 18 59 30" src="https://github.com/user-attachments/assets/2350d239-1b21-4992-a125-fe832b7bf4e0" />
