@@ -6,26 +6,24 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct FamilyListView: View {
+    
     @State private var searchText: String = ""
     @State private var navigateToAddFamily = false
-
-    let flats: [FlatInfo] = [
-        FlatInfo(flatNumber: "101", ownerName: "Meheboob", contact: "9876543210", residents: 4, owneship: "Owned"),
-        FlatInfo(flatNumber: "102", ownerName: "Sara", contact: "9123456780", residents: 3, owneship: "Rented"),
-        FlatInfo(flatNumber: "103", ownerName: "Ali", contact: "9988776655", residents: 5, owneship: "Owned")
-    ]
-
+    @Query var residents: [Resident]
+    @Environment(\.modelContext) private var modelContext
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
             HStack {
                 Text(kFamilyList.localized)
                     .font(AppFont.robotoBold(size: 25))
                     .foregroundColor(.primary)
-
+                
                 Spacer()
-
+                
                 Button(action: {
                     navigateToAddFamily = true
                 }) {
@@ -37,7 +35,7 @@ struct FamilyListView: View {
                         .foregroundColor(.white)
                         .cornerRadius(8)
                 }
-
+                
                 // Hidden NavigationLink triggered by state
                 NavigationLink(destination: AddNewFamilyView(), isActive: $navigateToAddFamily) {
                     EmptyView()
@@ -45,33 +43,59 @@ struct FamilyListView: View {
                 .hidden()
             }
             .padding(.horizontal, 16)
-
+            
             TextField(kSearch.localized, text: $searchText)
                 .padding(10)
                 .background(Color(.systemGray6))
                 .cornerRadius(8)
                 .padding(.horizontal, 16)
-
+            
             List(filteredFlats) { flat in
-                FlatCellView(flat: flat)
+                FlatCellView(flat: flat) {
+                    deleteResident(flatNumber: flat.flatNumber)
+                }
             }
             .listStyle(.plain)
         }
     }
-
+    
     var filteredFlats: [FlatInfo] {
+        let mappedFlats = residents.map {
+            FlatInfo(
+                flatNumber: $0.flatNumber,
+                ownerName: $0.ownerName,
+                contact: $0.contactNumber,
+                residents: Int8($0.numberOfResidents),
+                owneship: $0.ownershipType
+            )
+        }
+        
         if searchText.isEmpty {
-            return flats
+            return mappedFlats
         } else {
-            return flats.filter {
+            return mappedFlats.filter {
                 $0.flatNumber.localizedCaseInsensitiveContains(searchText) ||
                 $0.ownerName.localizedCaseInsensitiveContains(searchText)
             }
         }
     }
+    
+    func deleteResident(flatNumber: String) {
+        let descriptor = FetchDescriptor<Resident>(
+            predicate: #Predicate { $0.flatNumber == flatNumber }
+        )
+        do {
+            let results = try modelContext.fetch(descriptor)
+            for resident in results {
+                modelContext.delete(resident)
+            }
+            try modelContext.save()
+        } catch {
+            print("Delete failed: \(error)")
+        }
+    }
+    
 }
-
-
 
 #Preview {
     FamilyListView()

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct FlatCellView: View {
     let flat: FlatInfo
+    let onDelete: () -> Void
     
     var body: some View {
         HStack {
@@ -30,7 +31,7 @@ struct FlatCellView: View {
                     .buttonStyle(ActionButtonStyle(color: .blue))
                     
                     Button(kDelete.localized) {
-                        // Delete action
+                        onDelete()
                     }
                     .buttonStyle(ActionButtonStyle(color: .red))
                 }
@@ -54,6 +55,7 @@ struct FlatCellView: View {
                 .foregroundColor(.primary)
         )
     }
+
 }
 
 struct ActionButtonStyle: ButtonStyle {
@@ -69,5 +71,5 @@ struct ActionButtonStyle: ButtonStyle {
 
 
 #Preview {
-    FlatCellView(flat: .init(flatNumber: "101", ownerName: "John Doe", contact: "+923123456789", residents: 2, owneship: "Owned"))
+    FlatCellView(flat: .init(flatNumber: "101", ownerName: "John Doe", contact: "+923123456789", residents: 2, owneship: "Owned"), onDelete: {})
 }
