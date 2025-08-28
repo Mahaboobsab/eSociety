@@ -8,39 +8,27 @@
 import SwiftUI
 
 struct FlatCellView: View {
-    let flat: FlatInfo
+    let resident: Resident
     let onDelete: () -> Void
+    let onEdit: () -> Void
     
     var body: some View {
-        HStack {
-            VStack(alignment: .leading, spacing: 8) {
-                infoRow(label: kFlatNo.localized, value: flat.flatNumber)
-                infoRow(label: kOwnerName.localized, value: flat.ownerName)
-                infoRow(label: kContact.localized, value: flat.contact)
-                infoRow(label: kResidentCount.localized, value: "\(flat.residents)")
-                infoRow(label: kOwnership.localized, value: flat.owneship)
-                
-                HStack(spacing: 16) {
-                    Text(kActions.localized)
-                        .font(AppFont.robotoBold(size: 18))
-                        .foregroundColor(.primary)
-                    
-                    Button(kEdit.localized) {
-                        // Edit action
-                    }
+        VStack(alignment: .leading, spacing: 8) {
+            infoRow(label: kFlatNo.localized, value: resident.flatNumber)
+            infoRow(label: kOwnerName.localized, value: resident.ownerName)
+            infoRow(label: kContact.localized, value: resident.contactNumber)
+            infoRow(label: kResidentCount.localized, value: "\(resident.numberOfResidents)")
+            infoRow(label: kOwnership.localized, value: resident.ownershipType)
+            
+            HStack(spacing: 16) {
+                Button(kEdit.localized, action: onEdit)
                     .buttonStyle(ActionButtonStyle(color: .blue))
-                    
-                    Button(kDelete.localized) {
-                        onDelete()
-                    }
+                
+                Button(kDelete.localized, action: onDelete)
                     .buttonStyle(ActionButtonStyle(color: .red))
-                }
             }
-            Spacer()
         }
-        .padding(.vertical, 12)
-        .padding(.horizontal, 16)
-        .background(Color(.systemBackground))
+        .padding()
     }
     
     @ViewBuilder
@@ -55,8 +43,8 @@ struct FlatCellView: View {
                 .foregroundColor(.primary)
         )
     }
-
 }
+
 
 struct ActionButtonStyle: ButtonStyle {
     let color: Color
@@ -71,5 +59,18 @@ struct ActionButtonStyle: ButtonStyle {
 
 
 #Preview {
-    FlatCellView(flat: .init(flatNumber: "101", ownerName: "John Doe", contact: "+923123456789", residents: 2, owneship: "Owned"), onDelete: {})
+    FlatCellView(
+        resident: Resident(
+            flatNumber: "101",
+            emailID: "john@example.com",
+            ownerName: "John Doe",
+            ownershipType: "Owned",
+            contactNumber: "+923123456789",
+            moveInDate: Date(),
+            numberOfResidents: 2,
+            maintenanceCategory: "Monthly"
+        ),
+        onDelete: {},
+        onEdit: {}
+    )
 }

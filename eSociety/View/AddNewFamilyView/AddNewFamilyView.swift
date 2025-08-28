@@ -9,14 +9,15 @@ import SwiftUI
 import SwiftData
 
 struct AddNewFamilyView: View {
+    //Swift Data
+    @Environment(\.modelContext) private var modelContext
+    var existingResident: Resident? = nil
+
+        
     let ownerOptions = [kOwnerOption, kTenantOption, kFamilyMemberOption, kOtherOption]
     let maintenanceOptions = [kMonthlyOption, kQuarterlyOption, kYearlyOption]
     
     let fieldHeight: CGFloat = 60
-    
-    //Swift Data
-    
-    @Environment(\.modelContext) private var modelContext
 
     @State private var flatNumber = ""
     @State private var emailID = ""
@@ -27,7 +28,19 @@ struct AddNewFamilyView: View {
     @State private var residentCount = ""
     @State private var maintenanceType = kMonthlyOption
     
-    
+
+    init(existingResident: Resident? = nil) {
+        self.existingResident = existingResident
+        _flatNumber = State(initialValue: existingResident?.flatNumber ?? "")
+        _emailID = State(initialValue: existingResident?.emailID ?? "")
+        _ownerName = State(initialValue: existingResident?.ownerName ?? "")
+        _ownershipType = State(initialValue: existingResident?.ownershipType ?? kOwnerOption)
+        _contactNumber = State(initialValue: existingResident?.contactNumber ?? "")
+        _selectedDate = State(initialValue: existingResident?.moveInDate ?? Date())
+        _residentCount = State(initialValue: existingResident.map { "\($0.numberOfResidents)" } ?? "")
+        _maintenanceType = State(initialValue: existingResident?.maintenanceCategory ?? kMonthlyOption)
+    }
+
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 16) {
@@ -127,24 +140,36 @@ struct AddNewFamilyView: View {
     //MARK: Swift Data
     
     func saveData() {
-        let resident = Resident(
-            flatNumber: flatNumber,
-            emailID: emailID,
-            ownerName: ownerName,
-            ownershipType: ownershipType,
-            contactNumber: contactNumber,
-            moveInDate: selectedDate,
-            numberOfResidents: Int(residentCount) ?? 1,
-            maintenanceCategory: maintenanceType
-        )
-
-        modelContext.insert(resident)
-
+        if let resident = existingResident {
+            // Edit flow
+            resident.flatNumber = flatNumber
+            resident.emailID = emailID
+            resident.ownerName = ownerName
+            resident.ownershipType = ownershipType
+            resident.contactNumber = contactNumber
+            resident.moveInDate = selectedDate
+            resident.numberOfResidents = Int(residentCount) ?? 1
+            resident.maintenanceCategory = maintenanceType
+        } else {
+            // Create flow
+            let newResident = Resident(
+                flatNumber: flatNumber,
+                emailID: emailID,
+                ownerName: ownerName,
+                ownershipType: ownershipType,
+                contactNumber: contactNumber,
+                moveInDate: selectedDate,
+                numberOfResidents: Int(residentCount) ?? 1,
+                maintenanceCategory: maintenanceType
+            )
+            modelContext.insert(newResident)
+        }
         do {
             try modelContext.save()
-            print("Resident saved successfully")
+            print("Saved successfully")
+            // Optionally dismiss or navigate back
         } catch {
-            print("Failed to save resident: \(error)")
+            print("Save failed: \(error)")
         }
     }
 }

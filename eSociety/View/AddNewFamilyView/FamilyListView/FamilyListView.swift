@@ -14,6 +14,7 @@ struct FamilyListView: View {
     @State private var navigateToAddFamily = false
     @Query var residents: [Resident]
     @Environment(\.modelContext) private var modelContext
+    @State private var selectedResident: Resident? = nil
     
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
@@ -37,10 +38,22 @@ struct FamilyListView: View {
                 }
                 
                 // Hidden NavigationLink triggered by state
-                NavigationLink(destination: AddNewFamilyView(), isActive: $navigateToAddFamily) {
+                
+                NavigationLink(
+                    destination: Group {
+                        if let resident = selectedResident {
+                            AddNewFamilyView(existingResident: resident)
+                        } else {
+                            AddNewFamilyView()
+                        }
+                    },
+                    isActive: $navigateToAddFamily
+                ) {
                     EmptyView()
                 }
                 .hidden()
+                
+                
             }
             .padding(.horizontal, 16)
             
@@ -50,35 +63,28 @@ struct FamilyListView: View {
                 .cornerRadius(8)
                 .padding(.horizontal, 16)
             
-            List(filteredFlats) { flat in
-                FlatCellView(flat: flat) {
-                    deleteResident(flatNumber: flat.flatNumber)
+            List(filteredResidents, id: \.id) { resident in
+                FlatCellView(resident: resident) {
+                    deleteResident(flatNumber: resident.flatNumber)
+                } onEdit: {
+                    selectedResident = resident
+                    navigateToAddFamily = true
                 }
             }
-            .listStyle(.plain)
+            
         }
     }
-    
-    var filteredFlats: [FlatInfo] {
-        let mappedFlats = residents.map {
-            FlatInfo(
-                flatNumber: $0.flatNumber,
-                ownerName: $0.ownerName,
-                contact: $0.contactNumber,
-                residents: Int8($0.numberOfResidents),
-                owneship: $0.ownershipType
-            )
-        }
-        
+    var filteredResidents: [Resident] {
         if searchText.isEmpty {
-            return mappedFlats
+            return residents
         } else {
-            return mappedFlats.filter {
+            return residents.filter {
                 $0.flatNumber.localizedCaseInsensitiveContains(searchText) ||
                 $0.ownerName.localizedCaseInsensitiveContains(searchText)
             }
         }
     }
+    
     
     func deleteResident(flatNumber: String) {
         let descriptor = FetchDescriptor<Resident>(
