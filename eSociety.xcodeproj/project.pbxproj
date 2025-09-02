@@ -136,7 +136,7 @@
 		1EF0EB112E521B7E006A3831 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1EF0EB142E521B7E006A3831 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1EF0EB1D2E521D2D006A3831 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		1EF0EB222E523A9B006A3831 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		1EF0EB222E523A9B006A3831 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1EF0EB232E523C7F006A3831 /* FontConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontConstants.swift; sourceTree = "<group>"; };
 		1EF0EB252E523F66006A3831 /* ValidationConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationConstants.swift; sourceTree = "<group>"; };
 		1EF0EB272E523FD9006A3831 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -323,16 +323,17 @@
 		1EF0EB0C2E521B75006A3831 /* eSociety */ = {
 			isa = PBXGroup;
 			children = (
-				6164AC4C2E60BDFF003782EE /* DataBase */,
-				1EF0EB452E525186006A3831 /* Utility */,
-				1EF0EB352E524561006A3831 /* Localization */,
+				617FD7E92E674B4000730FF0 /* Core */,
+				617FD7E62E674A5600730FF0 /* App */,
 				1EF0EB222E523A9B006A3831 /* Info.plist */,
+				617FD7E82E674AAB00730FF0 /* Resources */,
+				617FD7E72E674A8100730FF0 /* Configuration */,
+				6164AC4C2E60BDFF003782EE /* DataBase */,
+				1EF0EB352E524561006A3831 /* Localization */,
 				1EF0EB1F2E523968006A3831 /* Fonts */,
-				1EF0EB1B2E521D0B006A3831 /* View */,
-				1EF0EB0D2E521B75006A3831 /* eSocietyApp.swift */,
-				1EF0EB112E521B7E006A3831 /* Assets.xcassets */,
+				1EF0EB1B2E521D0B006A3831 /* Features */,
 				1EF0EB132E521B7E006A3831 /* Preview Content */,
-				61E271B12E5CD59600210628 /* WebServiceManager */,
+				61E271B12E5CD59600210628 /* Networking */,
 			);
 			path = eSociety;
 			sourceTree = "<group>";
@@ -345,7 +346,7 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		1EF0EB1B2E521D0B006A3831 /* View */ = {
+		1EF0EB1B2E521D0B006A3831 /* Features */ = {
 			isa = PBXGroup;
 			children = (
 				61B645AD2E5F30BC00C189B3 /* DashboardView */,
@@ -355,7 +356,7 @@
 				1E75BE3C2E536C6A008C96CB /* TCView */,
 				1EF0EB1C2E521D15006A3831 /* Login */,
 			);
-			path = View;
+			path = Features;
 			sourceTree = "<group>";
 		};
 		1EF0EB1C2E521D15006A3831 /* Login */ = {
@@ -412,15 +413,6 @@
 			path = Styles;
 			sourceTree = "<group>";
 		};
-		1EF0EB452E525186006A3831 /* Utility */ = {
-			isa = PBXGroup;
-			children = (
-				61B40F352E5DF8C60008F978 /* APIEndpoint.swift */,
-				1EF0EB252E523F66006A3831 /* ValidationConstants.swift */,
-			);
-			path = Utility;
-			sourceTree = "<group>";
-		};
 		6164AC4C2E60BDFF003782EE /* DataBase */ = {
 			isa = PBXGroup;
 			children = (
@@ -435,6 +427,37 @@
 				617FD7E42E67438C00730FF0 /* Model.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		617FD7E62E674A5600730FF0 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				1EF0EB0D2E521B75006A3831 /* eSocietyApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		617FD7E72E674A8100730FF0 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		617FD7E82E674AAB00730FF0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1EF0EB112E521B7E006A3831 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		617FD7E92E674B4000730FF0 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				1EF0EB252E523F66006A3831 /* ValidationConstants.swift */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 		61B40F6D2E5E14FC0008F978 /* static */ = {
@@ -572,14 +595,15 @@
 			path = DashboardView;
 			sourceTree = "<group>";
 		};
-		61E271B12E5CD59600210628 /* WebServiceManager */ = {
+		61E271B12E5CD59600210628 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				61B40F352E5DF8C60008F978 /* APIEndpoint.swift */,
 				61E271AE2E5CD59600210628 /* NetworkReachability.swift */,
 				61E271AF2E5CD59600210628 /* Reachability.swift */,
 				61E271B02E5CD59600210628 /* WebServiceManager.swift */,
 			);
-			path = WebServiceManager;
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		9C9B6CE7C3B18249CEC28DBE /* Frameworks */ = {
