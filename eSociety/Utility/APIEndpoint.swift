@@ -14,7 +14,7 @@ enum APIEndpoint {
     case updateSettings
     case custom(path: String)
 
-    var path: String {
+   public var path: String {
         switch self {
         case .login:
             return "api/User/Login"

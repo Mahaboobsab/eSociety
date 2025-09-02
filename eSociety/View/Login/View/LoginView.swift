@@ -38,8 +38,11 @@ struct LoginView: View {
                             VStack(spacing: 20) {
                                 Text(kesociety.localized)
                                     .font(AppFont.robotoBold(size: 50))
+                                    .accessibilityIdentifier("AppTitle")
+                                
                                 Text(kuserLogin.localized)
                                     .font(AppFont.robotoBold(size: 30))
+                                    .accessibilityIdentifier("LoginTitle")
                             }
                             .padding(.top, 50)
                             .padding(.horizontal)
@@ -50,10 +53,12 @@ struct LoginView: View {
                                     .autocapitalization(.none)
                                     .textContentType(.emailAddress)
                                     .inputFieldStyle()
+                                    .accessibilityIdentifier("EmailField")
                                 
                                 SecureField(kpassword.localized, text: $viewModel.password)
                                     .textContentType(.password)
                                     .inputFieldStyle()
+                                    .accessibilityIdentifier("PasswordField")
                             }
                             .padding(.horizontal)
                             
@@ -76,6 +81,7 @@ struct LoginView: View {
                                 }
                                 .disabled(!viewModel.isFormValid || !coordinator.hasAcceptedTerms)
                                 .primaryButtonStyle(enabled: viewModel.isFormValid && coordinator.hasAcceptedTerms)
+                                .accessibilityIdentifier("LoginButton")
                             }
                             .padding(.horizontal)
                             
@@ -86,17 +92,20 @@ struct LoginView: View {
                 }
                 .sheet(isPresented: $coordinator.showTerms) {
                     TermsViewWrapper(delegate: coordinator)
+                        .accessibilityIdentifier("TermsSheet")
                 }
             }
             .navigationDestination(for: LoginDestination.self) { dest in
                 switch dest {
                 case .mainView:
                     MainView()
+                        .accessibilityIdentifier("MainView")
                 }
             }
         }
     }
 }
+
 
 
 #Preview {
