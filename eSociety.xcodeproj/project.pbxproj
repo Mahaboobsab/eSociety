@@ -27,7 +27,7 @@
 		611087022E672D930018BC38 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B40F352E5DF8C60008F978 /* APIEndpoint.swift */; };
 		6164AC4E2E60BE12003782EE /* Resident.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6164AC4D2E60BE12003782EE /* Resident.swift */; };
 		617FD7E22E6740CC00730FF0 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B40F352E5DF8C60008F978 /* APIEndpoint.swift */; };
-		61B40F312E5DF3A50008F978 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B40F302E5DF3A50008F978 /* Login.swift */; };
+		617FD7E52E67438D00730FF0 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617FD7E42E67438C00730FF0 /* Model.swift */; };
 		61B40F342E5DF6060008F978 /* ActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = 61B40F332E5DF6060008F978 /* ActivityIndicatorView */; };
 		61B40F362E5DF8D20008F978 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B40F352E5DF8C60008F978 /* APIEndpoint.swift */; };
 		61B40F732E5E14FC0008F978 /* Roboto_Condensed-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 61B40F462E5E14FC0008F978 /* Roboto_Condensed-SemiBoldItalic.ttf */; };
@@ -150,7 +150,7 @@
 		611086F32E672BB70018BC38 /* eSocietyXCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = eSocietyXCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6164AC4D2E60BE12003782EE /* Resident.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resident.swift; sourceTree = "<group>"; };
 		617FD7D12E673C2900730FF0 /* eSocietyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = eSocietyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		61B40F302E5DF3A50008F978 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Login.swift; path = eSociety/View/Login/Login.swift; sourceTree = SOURCE_ROOT; };
+		617FD7E42E67438C00730FF0 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		61B40F352E5DF8C60008F978 /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
 		61B40F372E5E14FC0008F978 /* Roboto_Condensed-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto_Condensed-Black.ttf"; sourceTree = "<group>"; };
 		61B40F382E5E14FC0008F978 /* Roboto_Condensed-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto_Condensed-BlackItalic.ttf"; sourceTree = "<group>"; };
@@ -361,9 +361,9 @@
 		1EF0EB1C2E521D15006A3831 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				617FD7E32E67438500730FF0 /* Model */,
 				1E75BE3F2E536CB4008C96CB /* Coordinator */,
 				1EF0EB432E525157006A3831 /* ViewModel */,
-				1EF0EB422E525151006A3831 /* Model */,
 				1EF0EB402E52513E006A3831 /* View */,
 				1EF0EB292E524136006A3831 /* ViewModifiers.swift */,
 			);
@@ -394,14 +394,6 @@
 				1EF0EB442E525166006A3831 /* Styles */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		1EF0EB422E525151006A3831 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				61B40F302E5DF3A50008F978 /* Login.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		1EF0EB432E525157006A3831 /* ViewModel */ = {
@@ -435,6 +427,14 @@
 				6164AC4D2E60BE12003782EE /* Resident.swift */,
 			);
 			path = DataBase;
+			sourceTree = "<group>";
+		};
+		617FD7E32E67438500730FF0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				617FD7E42E67438C00730FF0 /* Model.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		61B40F6D2E5E14FC0008F978 /* static */ = {
@@ -897,7 +897,6 @@
 				1E75BE3E2E536C7D008C96CB /* TermsViewWrapper.swift in Sources */,
 				1EF0EB262E523F66006A3831 /* ValidationConstants.swift in Sources */,
 				1EF0EB2C2E524177006A3831 /* ButtonStyles.swift in Sources */,
-				61B40F312E5DF3A50008F978 /* Login.swift in Sources */,
 				61B645812E5ECAA500C189B3 /* FlatCellView.swift in Sources */,
 				1EF0EB242E523C7F006A3831 /* FontConstants.swift in Sources */,
 				1EF0EB0E2E521B75006A3831 /* eSocietyApp.swift in Sources */,
@@ -905,6 +904,7 @@
 				61E271B32E5CD59600210628 /* NetworkReachability.swift in Sources */,
 				61B645AF2E5F30D900C189B3 /* DashboardView.swift in Sources */,
 				61E271B42E5CD59600210628 /* WebServiceManager.swift in Sources */,
+				617FD7E52E67438D00730FF0 /* Model.swift in Sources */,
 				1EF0EB372E52456F006A3831 /* LocalizedKeys.swift in Sources */,
 				61B645B32E5F374C00C189B3 /* YoYSpendingView.swift in Sources */,
 				61B645B52E5F3DEC00C189B3 /* BadgeView.swift in Sources */,
