@@ -298,7 +298,6 @@
 		1EF0EB012E521B74006A3831 = {
 			isa = PBXGroup;
 			children = (
-				1EF0EB332E5243EF006A3831 /* Localizable.strings */,
 				1EF0EB0C2E521B75006A3831 /* eSociety */,
 				611086E02E6729C50018BC38 /* eSocietyTests */,
 				611086F42E672BB70018BC38 /* eSocietyXCTests */,
@@ -323,17 +322,15 @@
 		1EF0EB0C2E521B75006A3831 /* eSociety */ = {
 			isa = PBXGroup;
 			children = (
-				617FD7E92E674B4000730FF0 /* Core */,
 				617FD7E62E674A5600730FF0 /* App */,
-				1EF0EB222E523A9B006A3831 /* Info.plist */,
-				617FD7E82E674AAB00730FF0 /* Resources */,
-				617FD7E72E674A8100730FF0 /* Configuration */,
-				6164AC4C2E60BDFF003782EE /* DataBase */,
-				1EF0EB352E524561006A3831 /* Localization */,
-				1EF0EB1F2E523968006A3831 /* Fonts */,
+				617FD7E92E674B4000730FF0 /* Core */,
 				1EF0EB1B2E521D0B006A3831 /* Features */,
+				6164AC4C2E60BDFF003782EE /* DataBase */,
+				617FD7E72E674A8100730FF0 /* Configuration */,
+				617FD7E82E674AAB00730FF0 /* Resources */,
 				1EF0EB132E521B7E006A3831 /* Preview Content */,
 				61E271B12E5CD59600210628 /* Networking */,
+				1EF0EB222E523A9B006A3831 /* Info.plist */,
 			);
 			path = eSociety;
 			sourceTree = "<group>";
@@ -440,6 +437,7 @@
 		617FD7E72E674A8100730FF0 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
+				1EF0EB352E524561006A3831 /* Localization */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
@@ -447,7 +445,9 @@
 		617FD7E82E674AAB00730FF0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1EF0EB1F2E523968006A3831 /* Fonts */,
 				1EF0EB112E521B7E006A3831 /* Assets.xcassets */,
+				1EF0EB332E5243EF006A3831 /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
