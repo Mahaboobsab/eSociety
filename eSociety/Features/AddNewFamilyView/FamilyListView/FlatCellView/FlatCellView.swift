@@ -20,6 +20,12 @@ struct FlatCellView: View {
             infoRow(label: kResidentCount.localized, value: "\(resident.numberOfResidents)")
             infoRow(label: kOwnership.localized, value: resident.ownershipType)
             
+            // ✅ Updated to use infoRow for date
+            infoRow(
+                label: kMoveInDateLabel.localized,
+                value: DateFormatterUtil.string(from: resident.moveInDate, format: "dd MMM yyyy")
+            )
+            
             HStack(spacing: 16) {
                 Button(kEdit.localized, action: onEdit)
                     .buttonStyle(ActionButtonStyle(color: .blue))
