@@ -25,6 +25,7 @@
 		1EF0EB3F2E524FBB006A3831 /* CoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1EF0EB3E2E524FBB006A3831 /* CoreSwift */; };
 		611087012E672D720018BC38 /* ValidationConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF0EB252E523F66006A3831 /* ValidationConstants.swift */; };
 		611087022E672D930018BC38 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B40F352E5DF8C60008F978 /* APIEndpoint.swift */; };
+		613CFE7A2E68AFEC009432B2 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613CFE792E68AFEA009432B2 /* Logger.swift */; };
 		614498742E6801800012A88C /* DateFormatterUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 614498732E6801800012A88C /* DateFormatterUtil.m */; };
 		6164AC4E2E60BE12003782EE /* Resident.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6164AC4D2E60BE12003782EE /* Resident.swift */; };
 		617FD7E22E6740CC00730FF0 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B40F352E5DF8C60008F978 /* APIEndpoint.swift */; };
@@ -149,6 +150,7 @@
 		503B7789FA0CF11D84A8C8CD /* Pods-eSociety.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eSociety.debug.xcconfig"; path = "Target Support Files/Pods-eSociety/Pods-eSociety.debug.xcconfig"; sourceTree = "<group>"; };
 		611086DF2E6729C50018BC38 /* eSocietyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = eSocietyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		611086F32E672BB70018BC38 /* eSocietyXCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = eSocietyXCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		613CFE792E68AFEA009432B2 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		614498712E6801800012A88C /* eSociety-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "eSociety-Bridging-Header.h"; sourceTree = "<group>"; };
 		614498722E6801800012A88C /* DateFormatterUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DateFormatterUtil.h; sourceTree = "<group>"; };
 		614498732E6801800012A88C /* DateFormatterUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DateFormatterUtil.m; sourceTree = "<group>"; };
@@ -334,6 +336,7 @@
 				617FD7E82E674AAB00730FF0 /* Resources */,
 				1EF0EB132E521B7E006A3831 /* Preview Content */,
 				61E271B12E5CD59600210628 /* Networking */,
+				613CFE782E68AFDF009432B2 /* Utils */,
 				1EF0EB222E523A9B006A3831 /* Info.plist */,
 				614498722E6801800012A88C /* DateFormatterUtil.h */,
 				614498732E6801800012A88C /* DateFormatterUtil.m */,
@@ -415,6 +418,14 @@
 				1EF0EB2B2E524177006A3831 /* ButtonStyles.swift */,
 			);
 			path = Styles;
+			sourceTree = "<group>";
+		};
+		613CFE782E68AFDF009432B2 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				613CFE792E68AFEA009432B2 /* Logger.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		6164AC4C2E60BDFF003782EE /* DataBase */ = {
@@ -928,6 +939,7 @@
 				61B40F362E5DF8D20008F978 /* APIEndpoint.swift in Sources */,
 				61B6457B2E5EC21500C189B3 /* FamilyListView.swift in Sources */,
 				1E75BE3E2E536C7D008C96CB /* TermsViewWrapper.swift in Sources */,
+				613CFE7A2E68AFEC009432B2 /* Logger.swift in Sources */,
 				1EF0EB262E523F66006A3831 /* ValidationConstants.swift in Sources */,
 				1EF0EB2C2E524177006A3831 /* ButtonStyles.swift in Sources */,
 				61B645812E5ECAA500C189B3 /* FlatCellView.swift in Sources */,

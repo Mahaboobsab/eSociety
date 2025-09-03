@@ -8,16 +8,22 @@
 import SwiftUI
 import SwiftData
 
+// MARK: - FamilyListView
+/// Displays a list of families/residents with search, add, edit, and delete functionality.
 struct FamilyListView: View {
     
-    @State private var searchText: String = ""
-    @State private var navigateToAddFamily = false
-    @Query var residents: [Resident]
-    @Environment(\.modelContext) private var modelContext
-    @State private var selectedResident: Resident? = nil
+    // MARK: - State & Environment
+    @State private var searchText: String = ""                   // Text entered in search bar
+    @State private var navigateToAddFamily = false              // Controls navigation to AddNewFamilyView
+    @Query var residents: [Resident]                             // Fetches all residents from SwiftData
+    @Environment(\.modelContext) private var modelContext       // CoreData/SwiftData context for CRUD operations
+    @State private var selectedResident: Resident? = nil        // Resident selected for editing
     
+    // MARK: - Body
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
+            
+            // MARK: - Header with Title & Add Button
             HStack {
                 Text(kFamilyList.localized)
                     .font(AppFont.robotoBold(size: 25))
@@ -25,6 +31,7 @@ struct FamilyListView: View {
                 
                 Spacer()
                 
+                // Add New Family button
                 Button(action: {
                     navigateToAddFamily = true
                 }) {
@@ -37,43 +44,43 @@ struct FamilyListView: View {
                         .cornerRadius(8)
                 }
                 
-                // Hidden NavigationLink triggered by state
-                
+                // Hidden NavigationLink triggered by state (for add/edit)
                 NavigationLink(
                     destination: Group {
                         if let resident = selectedResident {
-                            AddNewFamilyView(existingResident: resident)
+                            AddNewFamilyView(existingResident: resident) // Edit existing resident
                         } else {
-                            AddNewFamilyView()
+                            AddNewFamilyView() // Add new resident
                         }
                     },
                     isActive: $navigateToAddFamily
                 ) {
                     EmptyView()
                 }
-                .hidden()
-                
-                
+                .hidden() // Hide actual link UI
             }
             .padding(.horizontal, 16)
             
+            // MARK: - Search Bar
             TextField(kSearch.localized, text: $searchText)
                 .padding(10)
                 .background(Color(.systemGray6))
                 .cornerRadius(8)
                 .padding(.horizontal, 16)
             
+            // MARK: - Residents List
             List(filteredResidents, id: \.id) { resident in
                 FlatCellView(resident: resident) {
-                    deleteResident(flatNumber: resident.flatNumber)
+                    deleteResident(flatNumber: resident.flatNumber) // Delete action
                 } onEdit: {
-                    selectedResident = resident
-                    navigateToAddFamily = true
+                    selectedResident = resident                      // Set resident to edit
+                    navigateToAddFamily = true                       // Trigger navigation
                 }
             }
-            
         }
     }
+    
+    // MARK: - Filtered Residents based on search
     var filteredResidents: [Resident] {
         if searchText.isEmpty {
             return residents
@@ -85,7 +92,8 @@ struct FamilyListView: View {
         }
     }
     
-    
+    // MARK: - Delete Resident
+    /// Deletes a resident with the given flat number from SwiftData and saves context
     func deleteResident(flatNumber: String) {
         let descriptor = FetchDescriptor<Resident>(
             predicate: #Predicate { $0.flatNumber == flatNumber }
@@ -93,16 +101,17 @@ struct FamilyListView: View {
         do {
             let results = try modelContext.fetch(descriptor)
             for resident in results {
-                modelContext.delete(resident)
+                modelContext.delete(resident) // Delete from context
             }
-            try modelContext.save()
+            try modelContext.save()           // Save changes
         } catch {
-            print("Delete failed: \(error)")
+            Logger.debug("Delete failed: \(error)")
         }
     }
-    
 }
 
+// MARK: - Preview
 #Preview {
     FamilyListView()
 }
+

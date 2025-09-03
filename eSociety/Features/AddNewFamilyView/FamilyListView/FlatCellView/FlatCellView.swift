@@ -7,25 +7,33 @@
 
 import SwiftUI
 
+// MARK: - FlatCellView
+/// Displays resident details in a card-like view with edit and delete actions.
 struct FlatCellView: View {
-    let resident: Resident
-    let onDelete: () -> Void
-    let onEdit: () -> Void
     
+    // MARK: - Properties
+    let resident: Resident          // Resident data to display
+    let onDelete: () -> Void        // Action for delete button
+    let onEdit: () -> Void          // Action for edit button
+    
+    // MARK: - Body
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
+            
+            // Resident info rows
             infoRow(label: kFlatNo.localized, value: resident.flatNumber)
             infoRow(label: kOwnerName.localized, value: resident.ownerName)
             infoRow(label: kContact.localized, value: resident.contactNumber)
             infoRow(label: kResidentCount.localized, value: "\(resident.numberOfResidents)")
             infoRow(label: kOwnership.localized, value: resident.ownershipType)
             
-            // ✅ Updated to use infoRow for date
+            // Move-in date formatted
             infoRow(
                 label: kMoveInDateLabel.localized,
                 value: DateFormatterUtil.string(from: resident.moveInDate, format: "dd MMM yyyy")
             )
             
+            // Action buttons: Edit & Delete
             HStack(spacing: 16) {
                 Button(kEdit.localized, action: onEdit)
                     .buttonStyle(ActionButtonStyle(color: .blue))
@@ -34,9 +42,11 @@ struct FlatCellView: View {
                     .buttonStyle(ActionButtonStyle(color: .red))
             }
         }
-        .padding()
+        .padding() // Add padding around the card
     }
     
+    // MARK: - Info Row Helper
+    /// Combines label and value in a single Text view using bold + light font
     @ViewBuilder
     private func infoRow(label: String, value: String) -> some View {
         (
@@ -51,7 +61,8 @@ struct FlatCellView: View {
     }
 }
 
-
+// MARK: - Action Button Style
+/// Custom button style for edit and delete buttons
 struct ActionButtonStyle: ButtonStyle {
     let color: Color
     
@@ -59,11 +70,11 @@ struct ActionButtonStyle: ButtonStyle {
         configuration.label
             .font(AppFont.robotoBold(size: 20))
             .foregroundColor(color)
-            .opacity(configuration.isPressed ? 0.6 : 1.0)
+            .opacity(configuration.isPressed ? 0.6 : 1.0) // Press feedback
     }
 }
 
-
+// MARK: - Preview
 #Preview {
     FlatCellView(
         resident: Resident(
@@ -76,7 +87,7 @@ struct ActionButtonStyle: ButtonStyle {
             numberOfResidents: 2,
             maintenanceCategory: "Monthly"
         ),
-        onDelete: {},
-        onEdit: {}
+        onDelete: {}, // Placeholder for delete action
+        onEdit: {}    // Placeholder for edit action
     )
 }

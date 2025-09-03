@@ -8,18 +8,50 @@
 import SwiftUI
 import ActivityIndicatorView
 
+/// A reusable base view wrapper that provides:
+/// - A loading indicator overlay
+/// - Toast notifications
+/// - Alerts
+/// - Custom content through generics
+///
+/// Use this as a parent container to ensure consistent UI behaviors across the app.
 struct BaseView<Content: View>: View {
+    
+    // MARK: - Properties
+    
+    /// Whether the loading indicator should be visible.
     let isLoading: Bool
+    
+    /// A toast message to display at the bottom of the screen.
     @Binding var toastMessage: String?
     
-    // Alert bindings
+    // MARK: - Alert Bindings
+    
+    /// Controls whether the alert is shown.
     @Binding var showAlert: Bool
+    /// The alert title.
     @Binding var alertTitle: String
+    /// The alert message.
     @Binding var alertMessage: String
     
+    /// Callback triggered when the toast is dismissed.
     let onToastDismiss: (() -> Void)?
+    
+    /// The main content of the view.
     let content: () -> Content
-
+    
+    // MARK: - Initializer
+    
+    /// Initializes a new `BaseView`.
+    ///
+    /// - Parameters:
+    ///   - isLoading: Controls the loading indicator.
+    ///   - toastMessage: A binding for the toast text (dismisses automatically).
+    ///   - showAlert: Binding to show/hide an alert.
+    ///   - alertTitle: Binding for the alert's title.
+    ///   - alertMessage: Binding for the alert's message.
+    ///   - onToastDismiss: Optional callback fired when the toast disappears.
+    ///   - content: A `@ViewBuilder` closure returning the main UI content.
     init(
         isLoading: Bool = false,
         toastMessage: Binding<String?> = .constant(nil),
@@ -37,20 +69,23 @@ struct BaseView<Content: View>: View {
         self.onToastDismiss = onToastDismiss
         self.content = content
     }
-
+    
+    // MARK: - Body
+    
     var body: some View {
         ZStack {
+            // Base Content
             content()
-
-            // Loader
+            
+            // Loader Overlay
             if isLoading {
                 Color.black.opacity(0.2).ignoresSafeArea()
                 ActivityIndicatorView(isVisible: .constant(true), type: .flickeringDots())
                     .frame(width: 50, height: 50)
                     .foregroundColor(.blue)
             }
-
-            // Toast
+            
+            // Toast Notification
             if let message = toastMessage {
                 VStack {
                     Spacer()
@@ -64,16 +99,17 @@ struct BaseView<Content: View>: View {
                         .animation(.easeInOut, value: message)
                 }
                 .onAppear {
+                    // Auto-dismiss toast after 2 seconds
                     DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                         withAnimation {
                             toastMessage = nil
                         }
-                        onToastDismiss?()   // fire callback
+                        onToastDismiss?()   // Fire callback if provided
                     }
                 }
             }
         }
-        // Dynamic Alert
+        // Alert Presentation
         .alert(isPresented: $showAlert) {
             Alert(
                 title: Text(alertTitle),

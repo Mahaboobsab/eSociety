@@ -7,13 +7,18 @@
 
 import Foundation
 
+// MARK: - Purpose
+/// Centralized string keys for the app.
+/// These keys are used for localization and maintain consistency across the app UI.
 
 // MARK: - App Branding & Login
-let kesociety = "eSociety"
-let kuserLogin = "UserLogin"
-let kemailID = "EmailID"
-let kpassword = "Password"
-let klogin = "Login"
+let kesociety = "eSociety"                 // App name displayed on UI
+let kuserLogin = "UserLogin"               // Login screen title
+let kemailID = "EmailID"                    // Email label
+let kpassword = "Password"                  // Password label
+let klogin = "Login"                        // Login button text
+
+// MARK: - Resident / Flat Details
 let kFlatNo = "FlatNo"
 let kOwnerName = "OwnerName"
 let kContact = "Contact"
@@ -31,9 +36,11 @@ let kResidentPassword = "ResidentPassword"
 let kFamilyList = "FamilyList"
 let kSearch = "Search"
 
+// MARK: - Family Management
 let kManageFamiliesTitle = "ManageFamiliesTitle"
 let kAddNewFamilyTitle = "AddNewFamilyTitle"
 
+// MARK: - Form Labels & Placeholders
 let kFlatNumberLabel = "FlatNumberLabel"
 let kFlatNumberPlaceholder = "FlatNumberPlaceholder"
 
@@ -57,6 +64,7 @@ let kMaintenanceCategoryLabel = "MaintenanceCategoryLabel"
 
 let kSubmitButton = "SubmitButton"
 
+// MARK: - Dropdown Options
 let kOwnerOption = "OwnerOption"
 let kTenantOption = "TenantOption"
 let kFamilyMemberOption = "FamilyMemberOption"
