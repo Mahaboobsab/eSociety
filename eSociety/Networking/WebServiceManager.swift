@@ -1,7 +1,6 @@
 //
 //  WebServiceManager.swift
 //  MVVMDemo
-//
 //  Created by Mahaboob on 25/08/25.
 //  Copyright © 2025 Meheboob. All rights reserved.
 //
@@ -9,7 +8,8 @@
 //  Description: Centralized network layer using Alamofire with async/await.
 //  Provides GET, POST, PUT, DELETE helpers with Codable support.
 //  Ensures consistent request handling and response decoding across the app.
-//
+/// NOTE: Closures need completion because the function returns immediately, but the result comes later. It’s like leaving your number at a vending machine and waiting for a callback when the snack is ready. Async/await removes this need — it pauses the function until the result is available, then resumes execution. From the caller’s perspective, it looks like synchronous code: just let snack = try await buySnack(). This improves readability, avoids callback hell, and integrates naturally with Swift error handling (try/throw).
+
 
 import UIKit
 import Alamofire
