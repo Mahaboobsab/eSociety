@@ -132,10 +132,13 @@ struct LoginView: View {
         }
     }
     
+    
     // MARK: - Helper Methods
     /// Prints the SQLite path used by SwiftData
     /// Useful for debugging database storage location
     /// - Parameter context: ModelContext from SwiftData
+    
+    //TODO: - Move this Logic to ViewModel & Implement SOLID principles
     func printSwiftDataStorePath(context: ModelContext) {
         if let path = context.container.configurations.first?.url.path(percentEncoded: false) {
             Logger.debug("📁 SwiftData SQLite path: \(path)")

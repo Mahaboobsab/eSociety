@@ -28,6 +28,8 @@
 		613CFE7A2E68AFEC009432B2 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613CFE792E68AFEA009432B2 /* Logger.swift */; };
 		614498742E6801800012A88C /* DateFormatterUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 614498732E6801800012A88C /* DateFormatterUtil.m */; };
 		6164AC4E2E60BE12003782EE /* Resident.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6164AC4D2E60BE12003782EE /* Resident.swift */; };
+		616EF0F82E69C402000BCCC5 /* SwiftDataLoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616EF0F72E69C401000BCCC5 /* SwiftDataLoginRepository.swift */; };
+		616EF0FA2E69C432000BCCC5 /* LoginRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616EF0F92E69C430000BCCC5 /* LoginRepositoryProtocol.swift */; };
 		617FD7E22E6740CC00730FF0 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B40F352E5DF8C60008F978 /* APIEndpoint.swift */; };
 		617FD7E52E67438D00730FF0 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617FD7E42E67438C00730FF0 /* Model.swift */; };
 		61B40F342E5DF6060008F978 /* ActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = 61B40F332E5DF6060008F978 /* ActivityIndicatorView */; };
@@ -155,6 +157,8 @@
 		614498722E6801800012A88C /* DateFormatterUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DateFormatterUtil.h; sourceTree = "<group>"; };
 		614498732E6801800012A88C /* DateFormatterUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DateFormatterUtil.m; sourceTree = "<group>"; };
 		6164AC4D2E60BE12003782EE /* Resident.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resident.swift; sourceTree = "<group>"; };
+		616EF0F72E69C401000BCCC5 /* SwiftDataLoginRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataLoginRepository.swift; sourceTree = "<group>"; };
+		616EF0F92E69C430000BCCC5 /* LoginRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepositoryProtocol.swift; sourceTree = "<group>"; };
 		617FD7D12E673C2900730FF0 /* eSocietyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = eSocietyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		617FD7E42E67438C00730FF0 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		61B40F352E5DF8C60008F978 /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
@@ -431,6 +435,8 @@
 		6164AC4C2E60BDFF003782EE /* DataBase */ = {
 			isa = PBXGroup;
 			children = (
+				616EF0F92E69C430000BCCC5 /* LoginRepositoryProtocol.swift */,
+				616EF0F72E69C401000BCCC5 /* SwiftDataLoginRepository.swift */,
 				6164AC4D2E60BE12003782EE /* Resident.swift */,
 			);
 			path = DataBase;
@@ -936,12 +942,14 @@
 				614498742E6801800012A88C /* DateFormatterUtil.m in Sources */,
 				1E75BE412E536CC3008C96CB /* LoginCoordinator.swift in Sources */,
 				1EF0EB282E523FD9006A3831 /* LoginViewModel.swift in Sources */,
+				616EF0F82E69C402000BCCC5 /* SwiftDataLoginRepository.swift in Sources */,
 				61B40F362E5DF8D20008F978 /* APIEndpoint.swift in Sources */,
 				61B6457B2E5EC21500C189B3 /* FamilyListView.swift in Sources */,
 				1E75BE3E2E536C7D008C96CB /* TermsViewWrapper.swift in Sources */,
 				613CFE7A2E68AFEC009432B2 /* Logger.swift in Sources */,
 				1EF0EB262E523F66006A3831 /* ValidationConstants.swift in Sources */,
 				1EF0EB2C2E524177006A3831 /* ButtonStyles.swift in Sources */,
+				616EF0FA2E69C432000BCCC5 /* LoginRepositoryProtocol.swift in Sources */,
 				61B645812E5ECAA500C189B3 /* FlatCellView.swift in Sources */,
 				1EF0EB242E523C7F006A3831 /* FontConstants.swift in Sources */,
 				1EF0EB0E2E521B75006A3831 /* eSocietyApp.swift in Sources */,
