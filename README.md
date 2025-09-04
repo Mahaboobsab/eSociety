@@ -97,8 +97,12 @@
 
 ---
 
-## Screenshots
-> Add screenshots here for better clarity during review.
+# Screenshots
+
+**T&C Screen**  
+<img width="296" height="639" alt="Simulator Screenshot - iPhone 16 Plus - 2025-09-04 at 09 52 41" src="https://github.com/user-attachments/assets/83bd4402-1286-48e8-89e5-8c2bdbbc69a6" />
+
+
 
 **Login Screen**  
 <img width="296" height="639" alt="Simulator Screenshot - iPhone 16 Plus - 2025-09-03 at 23 48 09" src="https://github.com/user-attachments/assets/2ba91b91-accc-45f9-826b-084c2d0cc8d9" />
