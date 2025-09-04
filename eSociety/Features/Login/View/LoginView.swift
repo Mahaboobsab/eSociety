@@ -87,12 +87,14 @@ struct LoginView: View {
                                     Task {
                                         let request = LoginRequest(
                                             userEmail: viewModel.email,
-                                            userPassword: "1234" // Replace with viewModel.password in production
+                                            userPassword: "1234" // FIXME: → Replace with viewModel.password in production
                                         )
                                         do {
                                             let response = try await viewModel.getUserDetails(loginRequest: request)
+                                            // TODO: → Add in localization Constants
                                             toast = "✅ Login successful: \(response.data.userName)"
                                         } catch {
+                                            // TODO: → Add in localization Constants
                                             alertTitle = "Login Failed"
                                             alertMessage = error.localizedDescription
                                             showAlert = true
