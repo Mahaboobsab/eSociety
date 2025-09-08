@@ -146,6 +146,7 @@ struct LoginView: View {
             Logger.debug("❌ Could not find SwiftData store path.")
         }
     }
+    
 }
 
 // MARK: - Preview

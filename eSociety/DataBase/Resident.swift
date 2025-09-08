@@ -25,7 +25,7 @@ class Resident {
     var moveInDate: Date                                // Date the resident moved in
     var numberOfResidents: Int                           // Number of people in the flat
     var maintenanceCategory: String                      // Maintenance frequency (Monthly/Quarterly/Yearly)
-    
+    @Relationship var family: Family? // ✅ Link to Family
     // MARK: - Initializer
     /// Initialize a new Resident object
     /// - Parameters:

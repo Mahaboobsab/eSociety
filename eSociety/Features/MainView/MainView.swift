@@ -8,8 +8,6 @@
 
 import SwiftUI
 
-import SwiftUI
-
 // MARK: - MainView
 /// Main app screen with navigation buttons to different sections.
 struct MainView: View {
@@ -56,7 +54,13 @@ struct MainView: View {
         case "Families":
             FamilyListView()   // Navigate to Families screen
         case "Dashboard":
-            DashboardView()    // Navigate to Dashboard screen
+            DashboardView()
+        case "Payments":// Navigate to Dashboard screen
+            PaymentScreen()
+        case "Reports":
+            ReportsScreen()
+        case "Activities":
+            ActivitiesScreen()
         default:
             Text("\(title) Screen") // Placeholder for other screens
         }

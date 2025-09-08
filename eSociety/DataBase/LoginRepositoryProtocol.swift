@@ -8,4 +8,5 @@
 protocol LoginRepositoryProtocol {
     func saveUser(_ user: Resident) async throws
     func getStorePath() -> String?
+    
 }
