@@ -135,7 +135,14 @@
 <img width="296" height="639" alt="Simulator Screenshot - iPhone 16 Plus - 2025-09-08 at 22 21 38" src="https://github.com/user-attachments/assets/04c0cadd-25d4-4cd2-b099-5a189779c250" />  
 
 **Demo**  
-https://www.youtube.com/watch?v=IaLwXMxrxsE
+https://www.youtube.com/watch?v=IaLwXMxrxsE  
+
+Full Screen: https://youtu.be/j6lhrBlxpTY  
+
+Local DB
+
+<img width="1035" height="655" alt="Screenshot 2025-09-10 at 12 12 26 AM" src="https://github.com/user-attachments/assets/7ed33d92-6954-4d01-a2ce-7c8f9e8ac058" />
+
 
 
 
