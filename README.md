@@ -124,6 +124,29 @@
 
 <img width="296" height="639" alt="Simulator Screenshot - iPhone 16 Plus - 2025-09-03 at 23 51 56" src="https://github.com/user-attachments/assets/7cc49403-5c98-42d2-99ea-d4d7431ffd9f" />
 
+**Payments**   
+<img width="296" height="639" alt="Simulator Screenshot - iPhone 16 Plus - 2025-09-08 at 22 21 31" src="https://github.com/user-attachments/assets/f94850ab-9ab8-4ebb-9b82-d82a08277952" />  
+
+**Activities**  
+<img width="296" height="639" alt="Simulator Screenshot - iPhone 16 Plus - 2025-09-08 at 22 21 34" src="https://github.com/user-attachments/assets/20ecd798-57f5-4e40-ba7c-13208aa02f31" />  
+
+**Reports**  
+
+<img width="296" height="639" alt="Simulator Screenshot - iPhone 16 Plus - 2025-09-08 at 22 21 38" src="https://github.com/user-attachments/assets/04c0cadd-25d4-4cd2-b099-5a189779c250" />  
+
+**Demo**  
+https://www.youtube.com/watch?v=IaLwXMxrxsE  
+
+Full Screen: https://youtu.be/j6lhrBlxpTY  
+
+Local DB
+
+<img width="1035" height="655" alt="Screenshot 2025-09-10 at 12 12 26 AM" src="https://github.com/user-attachments/assets/7ed33d92-6954-4d01-a2ce-7c8f9e8ac058" />
+
+
+
+
+
 ---
 
 ## How to Run
