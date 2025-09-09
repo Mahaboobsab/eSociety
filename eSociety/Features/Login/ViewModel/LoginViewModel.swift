@@ -30,6 +30,7 @@ final class LoginViewModel: ObservableObject {
        /// - Complexity: **O(1)** → One network call, constant time.
        ///
     func getUserDetails(loginRequest: LoginRequest) async throws -> LoginResponse {
+        Logger.debug("\(loginRequest.email) \(loginRequest.password)")
         isLoading = true
         defer { isLoading = false } // Ensure spinner stops
 

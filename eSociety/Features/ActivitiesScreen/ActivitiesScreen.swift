@@ -7,29 +7,29 @@
 
 import SwiftUI
 
-struct Activity: Identifiable {
-    let id = UUID()
-    let title: String
-    let date: String
-    let location: String
-    let isCompleted: Bool
-}
-
 struct ActivitiesScreen: View {
-    @State private var activities: [Activity] = [
-        Activity(title: "Yoga Session", date: "Sept 10, 2025", location: "Community Hall", isCompleted: false),
-        Activity(title: "Tree Plantation Drive", date: "Sept 12, 2025", location: "Park Area", isCompleted: true),
-        Activity(title: "Cultural Night", date: "Sept 15, 2025", location: "Main Lawn", isCompleted: false)
-    ]
-
+    @StateObject private var viewModel = ActivitiesViewModel()
+    
+    // Alert & Toast Bindings
+    @State private var toastMessage: String? = nil
+    @State private var showAlert: Bool = false
+    @State private var alertTitle: String = ""
+    @State private var alertMessage: String = ""
+    
     var body: some View {
-        NavigationView {
-            List {
-                ForEach(activities) { activity in
+        BaseView(
+            isLoading: viewModel.isLoading,
+            toastMessage: $toastMessage,
+            showAlert: $showAlert,
+            alertTitle: $alertTitle,
+            alertMessage: $alertMessage
+        ) {
+            NavigationView {
+                List(viewModel.activities) { activity in
                     VStack(alignment: .leading, spacing: 6) {
                         Text(activity.title)
                             .font(.headline)
-                        Text("📅 \(activity.date) • 📍 \(activity.location)")
+                        Text("📅 \(activity.activityDate) • 📍 \(activity.location)")
                             .font(.subheadline)
                             .foregroundColor(.gray)
                         Text(activity.isCompleted ? "✅ Completed" : "🕒 Upcoming")
@@ -38,11 +38,28 @@ struct ActivitiesScreen: View {
                     }
                     .padding(.vertical, 8)
                 }
+                .navigationTitle("Activities")
             }
-            .navigationTitle("Activities")
+        }
+        .task {
+            await loadData()
+        }
+    }
+    
+    // MARK: - Load Activities with Error Handling
+    private func loadData() async {
+        await viewModel.loadActivities()
+        
+        if let error = viewModel.errorMessage {
+            alertTitle = "Error"
+            alertMessage = error
+            showAlert = true
+        } else {
+            toastMessage = "✅ Activities loaded successfully"
         }
     }
 }
+
 
 #Preview {
     ActivitiesScreen()

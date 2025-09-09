@@ -13,7 +13,7 @@ enum ValidationRegex {
     static let email = #"^[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$"#
     
     // Regex for validating password (at least 8 chars, 1 letter, 1 number)
-    static let password = #"^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"#
+    static let password = "^(?=.*[A-Z])(?=.*[a-z])(?=.*\\d)(?=.*[!@#$%^&*()_+=-]).{8,}$"
 }
 
 enum Validator {

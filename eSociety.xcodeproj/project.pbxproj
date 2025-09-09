@@ -110,6 +110,8 @@
 		61C0FBF12E6DB5B0005A1DD8 /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C0FBF02E6DB5AF005A1DD8 /* Report.swift */; };
 		61C0FBF32E6DB5C6005A1DD8 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C0FBF22E6DB5C5005A1DD8 /* Activity.swift */; };
 		61C0FBF52E6DB5DC005A1DD8 /* Family.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C0FBF42E6DB5DB005A1DD8 /* Family.swift */; };
+		61C0FDBA2E6F4F57005A1DD8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61C0FDB92E6F4F57005A1DD8 /* LaunchScreen.storyboard */; };
+		61C0FDBB2E6F4F57005A1DD8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61C0FDB92E6F4F57005A1DD8 /* LaunchScreen.storyboard */; };
 		61E271B22E5CD59600210628 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E271AF2E5CD59600210628 /* Reachability.swift */; };
 		61E271B32E5CD59600210628 /* NetworkReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E271AE2E5CD59600210628 /* NetworkReachability.swift */; };
 		61E271B42E5CD59600210628 /* WebServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E271B02E5CD59600210628 /* WebServiceManager.swift */; };
@@ -246,6 +248,7 @@
 		61C0FBF02E6DB5AF005A1DD8 /* Report.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Report.swift; sourceTree = "<group>"; };
 		61C0FBF22E6DB5C5005A1DD8 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		61C0FBF42E6DB5DB005A1DD8 /* Family.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Family.swift; sourceTree = "<group>"; };
+		61C0FDB92E6F4F57005A1DD8 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		61E271AE2E5CD59600210628 /* NetworkReachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkReachability.swift; sourceTree = "<group>"; };
 		61E271AF2E5CD59600210628 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		61E271B02E5CD59600210628 /* WebServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceManager.swift; sourceTree = "<group>"; };
@@ -257,6 +260,9 @@
 		611086E02E6729C50018BC38 /* eSocietyTests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = eSocietyTests; sourceTree = "<group>"; };
 		611086F42E672BB70018BC38 /* eSocietyXCTests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = eSocietyXCTests; sourceTree = "<group>"; };
 		617FD7D22E673C2900730FF0 /* eSocietyUITests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = eSocietyUITests; sourceTree = "<group>"; };
+		61EE353E2E70999C0021A291 /* Model */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Model; sourceTree = "<group>"; };
+		61EE35422E7099C40021A291 /* ViewModel */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = ViewModel; sourceTree = "<group>"; };
+		61EE35582E70A0860021A291 /* Service */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Service; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -358,6 +364,7 @@
 				61E271B12E5CD59600210628 /* Networking */,
 				613CFE782E68AFDF009432B2 /* Utils */,
 				1EF0EB222E523A9B006A3831 /* Info.plist */,
+				61C0FDB92E6F4F57005A1DD8 /* LaunchScreen.storyboard */,
 				614498722E6801800012A88C /* DateFormatterUtil.h */,
 				614498732E6801800012A88C /* DateFormatterUtil.m */,
 				614498712E6801800012A88C /* eSociety-Bridging-Header.h */,
@@ -670,6 +677,9 @@
 		61C0FBEB2E6DB125005A1DD8 /* ActivitiesScreen */ = {
 			isa = PBXGroup;
 			children = (
+				61EE35582E70A0860021A291 /* Service */,
+				61EE35422E7099C40021A291 /* ViewModel */,
+				61EE353E2E70999C0021A291 /* Model */,
 				61C0FBEC2E6DB135005A1DD8 /* ActivitiesScreen.swift */,
 			);
 			path = ActivitiesScreen;
@@ -710,6 +720,11 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				61EE353E2E70999C0021A291 /* Model */,
+				61EE35422E7099C40021A291 /* ViewModel */,
+				61EE35582E70A0860021A291 /* Service */,
 			);
 			name = eSociety;
 			packageProductDependencies = (
@@ -869,6 +884,7 @@
 				61B40F7F2E5E14FC0008F978 /* Roboto_Condensed-Bold.ttf in Resources */,
 				61B40F802E5E14FC0008F978 /* Roboto_SemiCondensed-ThinItalic.ttf in Resources */,
 				61B40F812E5E14FC0008F978 /* Roboto-BoldItalic.ttf in Resources */,
+				61C0FDBB2E6F4F57005A1DD8 /* LaunchScreen.storyboard in Resources */,
 				61B40F822E5E14FC0008F978 /* Roboto_Condensed-ThinItalic.ttf in Resources */,
 				61B40F832E5E14FC0008F978 /* Roboto_SemiCondensed-SemiBold.ttf in Resources */,
 				61B40F842E5E14FC0008F978 /* Roboto_Condensed-ExtraBoldItalic.ttf in Resources */,
@@ -920,6 +936,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61C0FDBA2E6F4F57005A1DD8 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1211,15 +1228,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"eSociety/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = eSociety/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
@@ -1230,6 +1250,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nadaf.labelDemo.eSociety;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/eSociety/eSociety-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1245,15 +1266,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"eSociety/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = eSociety/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
@@ -1264,6 +1288,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nadaf.labelDemo.eSociety;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/eSociety/eSociety-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;

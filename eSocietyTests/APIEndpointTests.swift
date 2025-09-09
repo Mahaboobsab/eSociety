@@ -15,29 +15,29 @@ struct APIEndpointTests {
     @Test("Login endpoint should have correct path and URL")
     func testLoginEndpoint() {
         let endpoint = APIEndpoint.login
-        #expect(endpoint.path == "api/User/Login")
-        #expect(endpoint.url.absoluteString == "https://api-dev-scus-demo.azurewebsites.net/api/User/Login")
+        #expect(endpoint.path == "esociety/login.php")
+        #expect(endpoint.url.absoluteString == "http://localhost:8080/esociety/login.php")
     }
     
-    @Test("SignUp endpoint should have correct path and URL")
-    func testSignUpEndpoint() {
-        let endpoint = APIEndpoint.signUp
-        #expect(endpoint.path == "auth/signup")
-        #expect(endpoint.url.absoluteString == "https://api-dev-scus-demo.azurewebsites.net/auth/signup")
+    @Test("FetchActivities endpoint should have correct path and URL")
+    func testFetchActivitiesEndpoint() {
+        let endpoint = APIEndpoint.fetchActivities
+        #expect(endpoint.path == "esociety/fetchActivities.php")
+        #expect(endpoint.url.absoluteString == "http://localhost:8080/esociety/fetchActivities.php")
     }
     
     @Test("FetchProfile endpoint should include userId in path and URL")
     func testFetchProfileEndpoint() {
         let endpoint = APIEndpoint.fetchProfile(userId: "12345")
         #expect(endpoint.path == "users/12345/profile")
-        #expect(endpoint.url.absoluteString == "https://api-dev-scus-demo.azurewebsites.net/users/12345/profile")
+        #expect(endpoint.url.absoluteString == "http://localhost:8080/users/12345/profile")
     }
     
     @Test("UpdateSettings endpoint should have correct path and URL")
     func testUpdateSettingsEndpoint() {
         let endpoint = APIEndpoint.updateSettings
         #expect(endpoint.path == "settings/update")
-        #expect(endpoint.url.absoluteString == "https://api-dev-scus-demo.azurewebsites.net/settings/update")
+        #expect(endpoint.url.absoluteString == "http://localhost:8080/settings/update")
     }
     
     @Test("Custom endpoint should return custom path and URL")
@@ -45,6 +45,6 @@ struct APIEndpointTests {
         let customPath = "custom/endpoint"
         let endpoint = APIEndpoint.custom(path: customPath)
         #expect(endpoint.path == customPath)
-        #expect(endpoint.url.absoluteString == "https://api-dev-scus-demo.azurewebsites.net/\(customPath)")
+        #expect(endpoint.url.absoluteString == "http://localhost:8080/\(customPath)")
     }
 }

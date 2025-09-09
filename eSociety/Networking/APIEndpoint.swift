@@ -9,17 +9,17 @@ import Foundation
 
 enum APIEndpoint {
     case login
-    case signUp
+    case fetchActivities
     case fetchProfile(userId: String)
     case updateSettings
     case custom(path: String)
-
-   public var path: String {
+    
+    public var path: String {
         switch self {
         case .login:
-            return "api/User/Login"
-        case .signUp:
-            return "auth/signup"
+            return "esociety/login.php"
+        case .fetchActivities:
+            return "esociety/fetchActivities.php"
         case .fetchProfile(let userId):
             return "users/\(userId)/profile"
         case .updateSettings:
@@ -28,9 +28,11 @@ enum APIEndpoint {
             return path
         }
     }
-
+    
     var url: URL {
-        let baseURL = URL(string: "https://api-dev-scus-demo.azurewebsites.net/")!
+        let baseURL = URL(string: "http://localhost:8080/")!
         return baseURL.appendingPathComponent(path)
     }
+    
+    
 }

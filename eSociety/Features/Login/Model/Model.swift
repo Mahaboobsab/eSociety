@@ -11,30 +11,27 @@ import Foundation
 /// Represents the request payload for login API.
 /// Conforms to `Codable` for easy JSON encoding/decoding.
 struct LoginRequest: Codable {
-    let userEmail, userPassword: String
+    let email: String
+    let password: String
 }
 
 // MARK: - LoginResponse
 /// Represents the response payload returned by login API.
 /// - Contains an optional error message and user data.
+
 struct LoginResponse: Codable {
-    let errorMessage: String?
-    let data: DataClass
+    let status: String
+    let message: String?
+    let admin: AdminData?
 }
 
-// MARK: - DataClass
-/// Represents the user details returned from the login API.
-struct DataClass: Codable {
-    let userName: String
-    let userID: Int
+struct AdminData: Codable {
+    let admin_id: Int
+    let name: String
     let email: String
-    
-    enum CodingKeys: String, CodingKey {
-        case userName
-        case userID = "userId"   // Map JSON key "userId" to Swift property `userID`
-        case email
-    }
+    let role: String
 }
+
 
 // MARK: - API Extension
 extension LoginRequest {

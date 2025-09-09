@@ -86,20 +86,26 @@ struct LoginView: View {
                                 Button(klogin.localized) {
                                     Task {
                                         let request = LoginRequest(
-                                            userEmail: viewModel.email,
-                                            userPassword: "1234" // FIXME: → Replace with viewModel.password in production
+                                            email: viewModel.email,
+                                            password: viewModel.password
                                         )
                                         do {
                                             let response = try await viewModel.getUserDetails(loginRequest: request)
-                                            // TODO: → Add in localization Constants
-                                            toast = "✅ Login successful: \(response.data.userName)"
+                                            
+                                            if response.status == "success", let admin = response.admin {
+                                                toast = "✅ Login successful: \(admin.email)"
+                                            } else {
+                                                alertTitle = "Login Failed"
+                                                alertMessage = response.message ?? "Unknown error"
+                                                showAlert = true
+                                            }
                                         } catch {
-                                            // TODO: → Add in localization Constants
-                                            alertTitle = "Login Failed"
+                                            alertTitle = "Network Error"
                                             alertMessage = error.localizedDescription
                                             showAlert = true
                                         }
                                     }
+                                    
                                 }
                                 .disabled(!viewModel.isFormValid || !coordinator.hasAcceptedTerms) // Only enable if form is valid and terms accepted
                                 .primaryButtonStyle(enabled: viewModel.isFormValid && coordinator.hasAcceptedTerms)
